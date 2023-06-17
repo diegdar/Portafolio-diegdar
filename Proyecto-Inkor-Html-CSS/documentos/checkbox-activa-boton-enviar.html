@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*CON BUTTON*/
+        /* input[type="checkbox"]:checked+#boton-enviar {
+            display: block;
+        } */
+
+        /*CON INPUT TYPE="SUBMIT"*/
+        input[type="checkbox"]:checked+input[type="submit"] {
+            display: block;
+        }
+
+        input[type="submit"] {
+            display: none;
+            /*ocultamos botón enviar*/
+        }
+    </style>
+</head>
+<!-- El botón "Enviar" estará oculto inicialmente, pero se mostrará automáticamente cuando el usuario marque la casilla de verificación "Acepto los términos y condiciones". -->
+
+<body>
+    <form>
+        <label for="terminos-condiciones">Acepto los términos y condiciones</label>
+        <input type="checkbox" id="terminos-condiciones">
+        
+        <!-- CON BUTTON-->
+        <!-- <button type="submit" id="boton-enviar" hidden>Enviar</button> -->
+       
+        <input type="submit" value="enviar" hidden>
+    </form>
+
+</body>
+
+</html>

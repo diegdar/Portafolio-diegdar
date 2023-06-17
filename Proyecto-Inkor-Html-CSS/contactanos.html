@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Electronix.css">
+<!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Kalam:wght@300&family=Satisfy&display=swap" rel="stylesheet">
+<!-- ANIMACION TEXTO     -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>Electronix: contactanos</title>
+</head>
+<body>
+<!--INICIO BODY---------------------------->
+<!-- HEADER----------- ------>
+<div class="container">
+    <header class="header">
+        <img src="Imagenes/Imagen_electrodomesticos.png" alt="imagen electrodomesticos">
+        <h1 class="animate__animated animate__bounceInLeft">ELECTRONIX</h1>
+    </header>
+<!-- MENU NAVEGACION -------->
+    <nav>
+        <ul class="menuNavegacion">
+            <li><a href="index.html">Home</a> </li>
+            <li><a href="quienes_somos.html">Quienes Somos</a> </li>
+            <li><a href="productos_servicios.html">Productos/Servicios</a> </li>
+            <li><a href="donde_estamos.html">Donde estamos</a> </li>
+            <li><a href="contactanos.html">Contactanos</a></li>
+            <li><a href="politica_privacidad.html">Politica Privacidad</a></li>
+        </ul>
+    </nav>
+<!-- ASIDE---------------- -->
+    <div class="asideMain">
+        <aside class="aside">
+            <h2>Novedades</h2>
+            <figure>
+                <img src="Imagenes/gafas_apple.jpeg" alt="gafas apple">
+                <figcaption>gafas apple</figcaption>
+            </figure>
+            <p>
+                <a href="https://cnnespanol.cnn.com/2023/06/06/apple-gafas-vision-pro-asi-funcionan-trax/"
+                    target="_blank">CNN Español </a>Probé
+                las
+                nuevas gafas Vision Pro de Apple. Así fue la experiencia al usarlas...
+            </p>
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/PYTSz5dp7xY"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen>
+            </iframe>
+            <h4>Lavadoras Calidad/Precio</h4>
+            <p>Las MEJORES LAVADORAS Calidad Precio 2023 ✅ ¿Qué lavadora comprar? Vea Aquí</p>
+
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/-OowYeOl2aM"
+                title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen></iframe>
+            <h4>Mejores Robots Aspiradores y FREGASUELOS</h4>
+
+        </aside>
+<!-- MAIN---------------- -->
+        <main class="main">
+            <h2>Contactanos</h2>
+            <p>Puedes contactar con nosotros a traves de nuestro formulario en el que podras preguntarnos acerca de nuestros productos, servicios, devoluciones o servicio post-venta. </p>
+            <form action="#">
+                <fieldset>
+                    <legend>Formulario de Contacto</legend>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="nombre">Nombre:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="nombre" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="telefono">Telefono:</label>
+                            </td>
+                            <td>
+                                <input type="text" id="telefono" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="email">E-mail:</label>
+                            </td>
+                            <td>
+                                <input type="email" id="email" required>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <select name="demo-category" id="demo-category" required>
+                                    <option value="">- Categoria -</option>
+                                    <option value="1">Productos</option>
+                                    <option value="2">Servicios</option>
+                                    <option value="3">Devoluciones</option>
+                                    <option value="4">Servicio Post-venta</option>
+                                </select>            
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                <textarea name="demo-message" id="demo-message" placeholder="Escriba su mensaje" rows="6"></textarea>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="terminos-condiciones"><a href="politica_privacidad.html">Acepto los términos y condiciones:</a> </label>
+                            </td>
+                            <td id="condiciones">
+                                <input type="checkbox" id="terminos-condiciones">
+                                <input type="submit" value="enviar" hidden>
+                            </td>
+                        </tr>
+                        <tr>
+                        <td></td>
+                        <td id="botonEnviar">
+                            
+                        </td>
+                        </tr>
+                    </table>
+                </fieldset>
+            </form>
+        </main>
+    </div>
+<!-- FOOTER---------------- -->
+    <footer class="footer">
+        <div id="datoscontacto">
+            <h3>Datos de Contacto</h3>
+            <p><span>Telefono: </span><a href="tel:00349667823">+34 966-782345</a></p>
+            <p><span>Direccion: </span>Gran Via de les Corts Catalanes, 863, 08018 Barcelona</p>
+        </div>
+        <div id="redesSociales">
+            <h3>Redes Sociales</h3>
+            <!-- instagram -->
+            <p><a href="https://www.instagram.com/" target="_blank"><img src="Imagenes/square-instagram.svg"
+                        alt="emoticon instagram"></a></p>
+            <h4>Instagram</h4>
+            <!-- youtube -->
+            <p><a href="https://www.youtube.com/" target="_blank"><img src="Imagenes/square-youtube.svg" alt=""></a></p>
+            <h4>Youtube</h4>
+        </div>
+        <div id="politicaPrivacidad">
+            <h3>Politica de Privacidad</h3>
+            <p><a href="politica_privacidad.html" target="_blank">Leer politica privacidad</a></p>
+            <p><a href="politica_privacidad.html#proteccionDatos" target="_blank">Proteccion de Datos</a></p>
+        </div>
+    </footer>
+</div>
+<!--FIN BODY ---- -->
+</body>
+</html>

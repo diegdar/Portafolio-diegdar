@@ -1,0 +1,408 @@
+/*RESETEO CONFIGURACION NAVEGADOR POR DEFECTO---------  */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}        
+/* GENERAL-------------- */
+header, aside, main, footer{
+    margin: 1em 1.5em 1em 1em;
+
+}
+aside, main, footer{
+    padding: 1em;
+    box-shadow: 10px 10px;
+}
+a:link{
+    color: red;
+}
+a:visited{
+    color: brown;
+}
+h2{
+    text-align: center;
+    font-size: 3em;
+}
+h3{
+    font-size: 2em;
+}
+h1, h2, h3{
+    /* google fonts */
+    font-family: 'Architects Daughter', cursive;
+    font-family: 'Kalam', cursive;
+    font-family: 'Satisfy', cursive;
+}
+
+.contenedorLink{
+    background-color: #ff6600;
+    color: white;
+    display: flex;
+    width: fit-content ;
+}
+    .contenedorLink a{
+        color: white;
+        text-decoration: none;
+        padding: 0.2em;
+        border-radius: 10px;
+    }
+/*MEDIAQUERY: VISUALIZACION TABLET---------------------  */
+@media screen and (min-width:320px) and (max-width:768px){
+    img{
+        width: 35%;
+    }
+    h1{
+        font-size: 0.2em;
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+    .menuNavegacion{
+        font-size: 1em;
+    }
+    /* .contenedorGeneral, .header ,.asideMain, .menuNavegacion {
+        display: flex;
+        flex-direction: column;
+    } */
+    .aside, .main{
+        width: 100%;
+    }
+}
+/*MEDIAQUEDRY: VISUALIZACION MOVIL---------------------  */
+@media screen and (max-width:320px) {
+    .contenedorGeneral, .header ,.asideMain, .menuNavegacion, footer {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+    }
+    .container{
+    background-color: yellow;
+    width: 100%;}
+    footer{
+        width: 100%;
+    }    
+    aside{
+        display: none ;
+    }
+    /* header{
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        font-size: 0.6em;
+    }
+    img{
+        width:30%;
+    }
+    main div{
+        overflow: scroll;
+    }
+    .item{
+        margin: 0em;
+    } */
+}
+/*  HEADER-------------*/
+header{
+    height: 20vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    margin: 0;
+}
+body{
+    background-color: #ffffff;
+}
+h1{
+    text-align: center;
+    font-size: 5em;
+    }
+/* NAVEGACION ---------*/
+.menuNavegacion{
+    background-color: #1ed760;
+    display: flex;
+    margin: 0 0.4em;
+    border-radius: 5em;
+    box-shadow: 10px 10px;
+    padding: 0.2em;
+    width: 97vw;
+}
+nav{
+    position: sticky;
+    top: 0px;
+}
+.menuNavegacion li{
+    flex: 1;
+    list-style-type: none;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2em;
+    border-radius: 5em;
+    font-family: 'Kalam', cursive;
+}
+.menuNavegacion li:hover{
+    background-color: #107c41;
+    color: white;
+    font-weight: bold;
+}
+.menuNavegacion a{
+    text-decoration: none;
+    color: white;
+
+}
+/* ASIDE + MAIN------------ */
+.asideMain{
+    display: flex;
+    /* justify-content: space-between; */
+}
+/* ASIDE------------ */
+aside{
+    background-color: #a8a8a8;
+    text-align: center;
+    /* display: flex;
+    flex-direction: column;
+    align-items: center; */
+    width: 20vw;
+    min-width: 204px;
+    border-radius: 2em;
+}
+aside iframe{
+    width: 90%;
+    margin: 0.5em;
+    border-radius: 2em;
+}
+aside img{
+    width: 90%;
+    border-radius: 2em;
+}
+figcaption{
+    font-weight: bold;
+}
+h4, figcaption{
+    font-size: 1.3em;
+}
+aside p{
+    margin-bottom: 0.5em;
+}
+/* MAIN----------------------------------------->*/
+main{
+    width: 80vw;
+    min-width: 494px;
+    background-color: #ffffff;
+    border-radius: 2em;
+}
+main p{
+    font-size: 1.5em;
+    margin-bottom: 0.8em;
+}
+main img{
+    text-align: center;
+}
+
+#mapaElectronix{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+#mainIndex div{
+    display: flex;
+    justify-content: center;
+}
+#mapaElectronix iframe{
+    box-shadow: 10px 10px;
+    border-radius: 8px;
+}
+    /* MAIN: formulario------------- */
+form{
+    font-size: 2em;
+}
+fieldset{
+    margin: 1em;
+    padding: 0.5em;
+}
+legend{
+    font-size: 2em;
+    color: #107c41;
+}
+label{
+    font-weight: bold;
+}
+input, textarea, select{
+    font-size: 1em;
+}
+    form:valid{
+        border: 5px dotted greenyellow;
+    }
+    input:required{
+        border:3px dashed rgb(252, 98, 137);
+        }
+    input:valid{
+        border:3px dashed rgb(141, 233, 99);
+    }
+    input:focus,textarea:focus{
+        background-color: rgb(214, 230, 193); 
+       }
+textarea{
+    width: 150%;
+    height: 500%;
+}
+input[type="checkbox"]:checked+input[type="submit"] {
+    display: block;
+    margin-left: 1em;
+}
+input[type="checkbox"]:checked{
+    transform: scale(1.5);
+    margin: 0.5em;
+}
+input[type="checkbox"]:not(:checked){
+    transform: scale(1.5);
+    margin: 0.5em;
+}
+/*Oculta el botón enviar*/
+input[type="submit"] {
+    display: none;
+}
+
+#condiciones{
+    display: flex;
+}
+    /* MAIN: Productos------------- */
+
+
+    /* Grid Productos ---------*/
+    .mainImagenesProductos {  display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 0.3fr 0.3fr 0.3fr 0.3fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "neveras neveras neveras"
+            "lavadoras portatiles portatiles"
+            "moviles moviles moviles"
+            "televisores televisores televisores";
+          justify-content: center;
+          align-items: center;
+      }
+      
+      .neveras {  display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 2fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "neveraLg neveraPhilips neveraneveraBosch";
+        grid-area: neveras;
+      }
+      .items{
+        display: flex;
+        justify-items: flex-end;
+        align-items: center;
+        /* margin: 0.5em; */
+      }
+      .neveraLg { grid-area: neveraLg; }
+      
+      .neveraPhilips { grid-area: neveraPhilips; }
+      
+      .neveraneveraBosch { grid-area: neveraneveraBosch; }
+      
+      .lavadoras {  display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "lavadoraSamsung lavadoraBosch";
+        grid-area: lavadoras;
+      }
+      
+      .lavadoraSamsung { grid-area: lavadoraSamsung; }
+      
+      .lavadoraBosch { grid-area: lavadoraBosch; }
+      
+      .portatiles {  display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "portatilHp portatilAcer";
+        grid-area: portatiles;
+      }
+      
+      .portatilHp { grid-area: portatilHp; }
+      
+      .portatilAcer { grid-area: portatilAcer; }
+      
+      .moviles {  display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "movilXiaomi movilSamsung movilApple movilMotorola";
+        grid-area: moviles;
+      }
+      
+      .movilXiaomi { grid-area: movilXiaomi; }
+      
+      .movilSamsung { grid-area: movilSamsung; }
+      
+      .movilApple { grid-area: movilApple; }
+      
+      .movilMotorola { grid-area: movilMotorola; }
+      
+      .televisores {  display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+        gap: 0px 0px;
+        grid-auto-flow: row;
+        grid-template-areas:
+          "teleLg teleSamsung teleSony";
+        grid-area: televisores;
+      }
+      
+      .teleLg { grid-area: teleLg; }
+      
+      .teleSamsung { grid-area: teleSamsung; }
+      
+      .teleSony { grid-area: teleSony; }
+      /* MAIN: Quienes Somos-------- */
+      #quienesSomos section{
+        display: flex;
+        justify-content: center;
+      }
+      #quienesSomos img{
+        width: 50%;
+      }
+      
+/* FOOTER------------------------------> */
+footer{
+    display: flex;
+    justify-content: space-around ;
+    /* align-items: center; */
+    width: 96vw;
+    background-color: #a8a8a8;
+    border-radius: 2em;
+    font-size: 1.2em;
+}
+footer img{
+    width: 15%;
+}
+#datoscontacto, #politicaPrivacidad{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+    /* Datos Contacto--- */
+    #datoscontacto span, #politicaPrivacidad a{
+        font-size: 1.5em;
+        font-weight: bold;
+    }
+    /* Redes Sociales--- */
+    #redesSociales{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+        /* Redes Sociales--- */
