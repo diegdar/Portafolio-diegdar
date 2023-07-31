@@ -69,7 +69,7 @@ body{
     .menu_horizontal{
         list-style-type: none;
         display: flex;
-        border-radius: 50px;
+        border-radius: 30px;
         background-color: #6c6c6c;
         width: fit-content;
         /* margin-top: 10px; */
@@ -77,7 +77,7 @@ body{
     .menu_horizontal li{
         padding: 8px;
         font-size: 1.2em;
-        text-decoration: 2px underline greenyellow;
+        list-style: none;
     }
     .menu_horizontal li:hover{
         background-color: #2eb9ff;
@@ -86,6 +86,31 @@ body{
     }
     .menu_vertical{
         display: none;
+        /* hace que el color del menu principal no se extienda al submenu */
+        position: absolute;
+        top: 100px;
+        /* hace que las foto no tapen el submenu al desplegarse */
+        z-index: 100;
+        list-style-type: none;
+        font-size: 0.8em;
+        text-decoration: none;
+        width: 200px;
+        background-color: #929292;
+        border-radius: 20px;
+
+    }
+    .menu_vertical li a{
+        text-decoration: none;
+        color: white;
+    }
+        .menu_vertical li:hover{
+            border-radius: 20px;
+            background-color: #2eb9ff;
+            width: 200px;
+
+        }
+    .menu_horizontal li:hover .menu_vertical{
+        display: block;
     }
 
 /*GALERIA DE IMAGENES--------  */
