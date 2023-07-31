@@ -66,7 +66,7 @@ body{
     height: fit-content;
 
 }
-    .menuNavegacion ul{
+    .menu_horizontal{
         list-style-type: none;
         display: flex;
         border-radius: 50px;
@@ -74,16 +74,21 @@ body{
         width: fit-content;
         /* margin-top: 10px; */
     }
-    .menuNavegacion ul li{
+    .menu_horizontal li{
         padding: 8px;
         font-size: 1.2em;
         text-decoration: 2px underline greenyellow;
     }
-    .menuNavegacion ul li:hover{
+    .menu_horizontal li:hover{
         background-color: #2eb9ff;
         border-radius: 50px;
         cursor:context-menu;
     }
+    .menu_vertical{
+        display: none;
+    }
+
+/*GALERIA DE IMAGENES--------  */
 .galeriaImagenes{
     display: flex;
 
