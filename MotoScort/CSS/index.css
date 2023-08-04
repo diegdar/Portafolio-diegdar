@@ -1,21 +1,3 @@
-/* GRID------------------------ */
-.container {  
-    display: grid;
-    grid-template-columns: 2fr 2fr 1fr;
-    grid-template-rows: 70px 250px auto 170px;
-    gap: 0px 0px;
-    grid-auto-flow: row;
-  }
-.header { grid-area: 1 / 1 / 2 / 4; }
-
-.logoEmpresa { grid-area: 1 / 1 / 2 / 2; }
-
-.menuNavegacion { grid-area: 1 / 2 / 2 / 4; }
-
-.main { grid-area: 3 / 1 / 4 / 4; }
-.galeriaImagenes { grid-area: 2 / 1 / 3 / 4; } 
-.footer { grid-area: 4 / 1 / 5 / 4; }
-
 .galeriaImagenes, .main, #precioMotos, #cajaPromociones, .footer{
     margin-top: 40px;
 }
@@ -25,6 +7,7 @@
     display: flex;
     animation-duration: 6s;
     animation-name: imagenesAnimadas;
+    z-index: -1;
 
 }
 @keyframes imagenesAnimadas {
@@ -48,10 +31,7 @@
         transform: scale(1.1);
         cursor: pointer;
     }
-    /* Mini Menu------- */
-
-
-/*MAIN-------------------------------------------  */
+/*MAIN--------------------------------  */
     /* Caja Reclamos>>>>>>>>>>>>>> */
 #reclamos {
     display: flex;
