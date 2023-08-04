@@ -1,109 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/MotoScort.css">
-    <script type="text/javaScript" src="/MotoScort.js"></script>
+    <!-- Conexion con CSS --------->
+    <link rel="stylesheet" href="/CSS/index.css">
+    <link rel="stylesheet" href="/CSS/general.css">
+    <!-- Conexion con JavaScript ------>
+    <script type="text/javaScript" src="/JavaScript/General.js"></script>
     <!-- METADATOS------- -->
-        <meta name="description" content="Tienda de venta de motos y accesorios">
-        <!-- keywords - palabras clave  IGNORADA POR LOS BUSCADORES-->
-        <meta name="keywords" content="motos, cascos, accesorio motos, baul moto, parrilla moto">
-        <!-- autor y copyright (OPCIONAL)-->
-        <meta name="author" content="Diego Dario Chacon Delgado">
-        <!-- Instruccion para los robotrs de busqueda -->
-        <meta name="robots" content="index,follow">
+    <meta name="description" content="Tienda de venta de motos y accesorios">
+    <!-- autor y copyright (OPCIONAL)-->
+    <meta name="author" content="Diego Dario Chacon Delgado">
+    <!-- Instruccion para los robotrs de busqueda -->
+    <meta name="robots" content="index,follow">
     <!-- GOOGLE FONTS-------------- -->
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Lumanosimo&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lumanosimo&display=swap" rel="stylesheet">
     <!-- ANIMACION TEXTO NOMBRE EMPRESA----- -->
-        <link
-        rel="stylesheet"
-        href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
-  />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
 
     <title>MotoScort:Home</title>
 </head>
-<body>
-    <div class="container">
-    <!-- HEADER------------------ -->
-        <div class="logoEmpresa">
-            <h2 class="animate__animated animate__slideInDown
 
-            ">MotoScort</h2>    
-            <img src="Imagenes/logoPrincipal-removebg-preview.png" alt="logo empresa, motociclista conduciendo una moto">
-        </div>
-        <div class="header"></div>
-        <nav class="menuNavegacion">
-            <ul class="menu_horizontal">
-                <li >Recambios y accesorios
-                    <ul class="menu_vertical">
-                        <li><a href="recambiosAccesorios.html#recambios">Recambios</a></li>
-                        <li><a href="recambiosAcesorios.html#cascos">Accesorios</a></li>
-                    </ul>
-                </li>
-                <li>Servicios
-                    <ul class="menu_vertical">
-                        <li>Reparacion</li>
-                        <li>Compraventa de Motos</li>
-                    </ul>
-                </li>
-                <li>Productos</li>
-                <li>Contactanos</li>
-            </ul>
-        </nav>
-        <!-- GALERIA DE IMAGENES--------- -->
-        <div class="galeriaImagenes">
-            <figure>
-                <img src="/Imagenes/motoBMW.jpg" alt="Moto BMW">
-                <figcaption class="imgGaleria">Las mas vintage</figcaption>
-            </figure>
-            <figure>
-                <img src="/Imagenes/motoChica.jpg" alt="Moto con chica sentada">
-                <figcaption class="imgGaleria">Las que no tienen limites</figcaption>
-            </figure>
-            <figure>
-                <img src="/Imagenes/moto3.jpg" alt="Moto aparcada">
-                <figcaption class="imgGaleria">Las mas rudas</figcaption>
-            </figure>
-            <figure>
-                <img src="/Imagenes/moto4.jpg" alt="Moto aparcada">
-                <figcaption class="imgGaleria">Las urbanitas</figcaption>
-            </figure>
-            <figure>
-                <img src="/Imagenes/moto5.jpeg" alt="Moto en movimiento">
-                <figcaption class="imgGaleria">Las mas veloces</figcaption>
-            </figure>
-            <figure>
-                <img src="/Imagenes/moto6.jpg" alt="Moto enduro derrapando">
-                <figcaption class="imgGaleria">Las intrepidas</figcaption>
-            </figure>
-        </div>
-        <!-- MINIMENU: Whatsap, Mapa, cita ver moto -->
-        <div class="miniMenu">
-            <figure>
-                <img src="/assets/iconMap.svg" alt="ver ubicaciones donde estamos" title="ver ubicaciones donde estamos">
-            </figure>        
-            <figure>
-                <img src="/assets/calendario.svg" alt="pedir cita para probar una moto" title="pedir cita para probar una moto">
-            </figure>        
-            <figure>
-                <a href="https://api.whatsapp.com/send?phone=34644294631" target="_blank">
-                    <img src="/assets/whatsapp.svg" alt="Contactanos por whatsapp" title="Enviar mensaje por whatsapp">
-                </a>
-            </figure>
-        </div>
-        <!-- MAIN----------------------- -->
-        <div class="main">
-            <h1>Promociones</h1>
+<body>
+<div class="container">
+    <header >    
+        <!-- Importacion de la cabecera, barra de navegacion y miniMenu------ -->
+        <iframe src="/includes/header.html" frameborder="0" scrolling="no"></iframe>
+    </header>
+    <!-- GALERIA DE IMAGENES----------->
+    <div class="galeriaImagenes">
+        <figure>
+            <img src="/Imagenes/motoBMW.jpg" alt="Moto BMW">
+            <figcaption class="imgGaleria">Las mas vintage</figcaption>
+        </figure>
+        <figure>
+            <img src="/Imagenes/motoChica.jpg" alt="Moto con chica sentada">
+            <figcaption class="imgGaleria">Las que no tienen limites</figcaption>
+        </figure>
+        <figure>
+            <img src="/Imagenes/moto3.jpg" alt="Moto aparcada">
+            <figcaption class="imgGaleria">Las mas rudas</figcaption>
+        </figure>
+        <figure>
+            <img src="/Imagenes/moto4.jpg" alt="Moto aparcada">
+            <figcaption class="imgGaleria">Las urbanitas</figcaption>
+        </figure>
+        <figure>
+            <img src="/Imagenes/moto5.jpeg" alt="Moto en movimiento">
+            <figcaption class="imgGaleria">Las mas veloces</figcaption>
+        </figure>
+        <figure>
+            <img src="/Imagenes/moto6.jpg" alt="Moto enduro derrapando">
+            <figcaption class="imgGaleria">Las intrepidas</figcaption>
+        </figure>
+    </div>
+    <!-- MAIN-------------------- ---------->
+    <main class="main">
+        <!-- Reclamos>>>>>>>>>>>>>> -->
+        <div id="reclamos">
             <section>
-                
+                <img src="/assets/icono_garantia.png" alt=" icono garantia">
+                <h2>VENTAJAS</h2>
+                <p>· Motos de sustitución</p>
+                <p>· Garantía desde 2 años</p>
+            </section>
+            <section>
+                <img src="/assets/icono_camionDelivery.png" alt="icono cambion delivery">
+                <h2>ENTREGA A DOMICILIO</h2>
+                <p>· No importa donde estés, si quieres te enviamos la moto donde quieras</p>
+            </section>
+            <section>
+                <img src="/assets/icono_servicioTecnico.png" alt="servicio tecnico">
+                <h2>SERVICIO TÉCNICO</h2>
+                <p>· Taller con servicio técnico especializado en nuestras instalaciones</p>
             </section>
         </div>
-        <div class="footer"></div>
-        <div class="redesSociales"></div>
-        <div class="politicaPrivacidad"></div>
-        <div class="linksPaginas"></div>
-      </div></body>
+        <!-- Imagen Motos con precio>>>>>>>>> -->
+        <div id="precioMotos">
+            <section>
+                <img src="/Imagenes/Honda_Cb_500x_Abs_2023.jpg" alt="imagen moto HONDA - CB 500X ABS 2023">
+                <figcaption>
+                    <h4>HONDA – CB 500X ABS 2023</h4>
+                    <p>Consiguela por solo 7.200€</p>
+                </figcaption>
+            </section>
+            <section>
+                <img src="/Imagenes//Honda_Forza_125_2023.jpeg" alt="imagen moto HONDA Forza 2023">
+                <figcaption>
+                    <h4>HONDA - FORZA 125 2023</h4>
+                    <p>Consiguela por solo 4.800€</p>
+                </figcaption>
+            </section>
+            <section>
+                <img src="/Imagenes/Honda_Pcx_125_2023.jpeg" alt="imagen moto HONDA PCX 125 2023">
+                <figcaption>
+                    <h4>HONDA - PCX 125 2023</h4>
+                    <p>Consiguela por solo 3.150€</p>
+                </figcaption>
+            </section>
+            <section>
+                <img src="/Imagenes/Honda_Shadow_Vt750c.jpeg" alt="imagen moto HONDA PCX 125 2023">
+                <figcaption>
+                    <h4>HONDA - SHADOW VT750C</h4>
+                    <p>Consiguela por solo 3.750€</p>
+                </figcaption>
+            </section>
+            <section>
+                <img src="/Imagenes/Kymco_Xciting_400_S_E5.jpeg" alt="imagen moto KYMCO – XCITING 400 S E5">
+                <figcaption>
+                    <h4>KYMCO – XCITING 400 S E5</h4>
+                    <p>Consiguela por solo 6.200€</p>
+                </figcaption>
+            </section>
+
+        </div>
+        <!-- Promociones>>>>>>>>>>>>>>>>>>>> -->
+        <h1>Promociones</h1>
+        <div id="cajaPromociones">
+            <section class="promociones">
+                <h2>Seguro a terceros Gratuito</h2>
+                <p>Si compras tu nueva moto antes del 30 de septiembre optendras tu seguro gratuito a terceros.</p>
+            </section>
+            <section class="promociones">
+                <h2>Descuentos en tu compra</h2>
+                <p>Cada vez que compres un repuesto o accesorio obtendras automaticamente un 20% de descuento en tu proxima compra.</p>
+            </section>
+        </div>
+    </main>
+    <footer class="footer">    
+        <!-- Importacion del Footer------ -->
+        <iframe src="/includes/footer.html" frameborder="0" scrolling="no"></iframe>
+    </footer>
+
+</div>
+</body>
+
 </html>

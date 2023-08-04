@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Conexion con CSS --------->
+    <link rel="stylesheet" href="/CSS/header&footer.css">
+    <!-- <link rel="stylesheet" href="/CSS/general.css"> -->
+    <!-- Conexion con JavaScript ------>
+    <script type="text/javaScript" src="/JavaScript/General.js"></script>
+    <!-- ANIMACION TEXTO NOMBRE EMPRESA----- -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <title>Document</title>
+
+</head>
+<body>
+<div class="container">
+    <!-- HEADER------------------ -->
+    <header class="nombreEmpresa">
+        <img src="/Imagenes/logoPrincipal.png" alt="logo empresa, motociclista conduciendo una moto" class="logoEmpresa">
+        <h2 class="animate__animated animate__slideInDown">MotoScort</h2>
+    </header>
+
+    <nav class="menuNavegacion">
+        <ul class="menu_horizontal">
+            <li><a href="../index.html">Home</a></li>
+            <li>Recambios y accesorios
+                <ul class="menu_vertical">
+                    <li><a href="recambiosAccesorios.html">Recambios</a></li>
+                    <li><a href="recambiosAcesorios.html#cascos">Accesorios</a></li>
+                </ul>
+            </li>
+            <li>Servicios
+                <ul class="menu_vertical">
+                    <li>Reparacion</li>
+                    <li>Compraventa de Motos</li>
+                </ul>
+            </li>
+            <li>Productos</li>
+            <li>Contactanos</li>
+        </ul>
+    </nav>
+    <!-- MINI MENU: whatsapp, mapa, reservar cita -->
+    <section class="miniMenu">
+        <figure>
+            <a href="dondeEstamos.html">
+                <img src="/assets/iconMap.svg" alt="ver ubicaciones donde estamos"
+                    title="ver ubicaciones donde estamos">
+            </a>
+        </figure>
+        <figure>
+            <a href="../formProbarMoto.html">
+                <img src="/assets/iconCalendario.svg" alt="pedir cita para probar una moto" title="pedir cita para probar una moto">
+            </a>
+        </figure>
+        <figure>
+            <a href="https://api.whatsapp.com/send?phone=34644294631">
+                <img src="/assets/iconWhatsapp.svg" alt="Contactanos por whatsapp" title="Enviar mensaje por whatsapp">
+            </a>
+        </figure>
+    </section>
+</div>
+</body>
+<!-- El target "_parent" hace que el  <iframe> no se desaparezca al hacer click al link y que lo abra en la ventana de la pagina que lo contiene y no en nueva pestaña o en el mismo <iframe>-->
+<script>
+ links = document.getElementsByTagName("a");
+ longArray = links.length;
+for (var i = 0; i < longArray; i++) {
+        links[i].setAttribute("target", "_parent");     
+}
+</script>
+</html>
