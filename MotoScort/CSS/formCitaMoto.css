@@ -1,0 +1,11 @@
+fieldset{
+    width: 70%;
+    text-align: center;
+}
+fieldset label{
+    margin: 10px 5px;
+}
+form input{
+    /* position: absolute;
+    left: 105px; */
+}

@@ -40,7 +40,7 @@ a:hover{
 /* GRID--------------------------- */
 .container {  display: grid;
     grid-template-columns: 2fr 2fr 1fr;
-    grid-template-rows: 70px;
+    grid-template-rows: 70px auto;
     gap: 0px 0px;
     grid-auto-flow: row;
   }
@@ -50,6 +50,7 @@ a:hover{
 }
 .header { grid-area: 1 / 1 / 2 / 4; }  
 .menuNavegacion { grid-area: 1 / 2 / 2 / 4; }
+.footer { grid-area: 4 / 1 / 5 / 4; }
 
 /* HEADER------------------ */
 .header{
@@ -60,7 +61,7 @@ a:hover{
 }
 .nombreEmpresa{
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     gap: 3px;
     font-size: 2.5em;
