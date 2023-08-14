@@ -51,7 +51,7 @@ main{
 /* IFRAME:  Header y Footer--------------- */
 header iframe{
     width: 97vw;
-    height: 25vh;
+    height: 35vh;
     z-index: 100;
     position: fixed;
 }
