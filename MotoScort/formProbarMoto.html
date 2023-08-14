@@ -4,8 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Conexion con CSS --------->
-    <link rel="stylesheet" href="/CSS/general.css">
-    <link rel="stylesheet" href="/CSS/formCitaMoto.css">
+        <link rel="stylesheet" href="/CSS/general.css">
+        <link rel="stylesheet" href="/CSS/formCitaMoto.css">
+    <!-- Conexion con LiveValidtion-------- -->
+        <script type="text/javascript" src="/livevalidation/src/livevalidation_standalone.js"></script>
+        <link rel="stylesheet" href="/livevalidation/test/css/validation.css">
     <!-- Conexion con JavaScript ------>
     <script type="text/javaScript" src="/JavaScript/General.js"></script>
     <!-- METADATOS------- -->
@@ -15,10 +18,10 @@
     <!-- Instruccion para los robotrs de busqueda -->
     <meta name="robots" content="noindex,nofollow">
     <!-- GOOGLE FONTS-------------- -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lumanosimo&display=swap" rel="stylesheet">
-    <link rel="import" href="/includes/header_footer.html">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lumanosimo&display=swap" rel="stylesheet">
+        <link rel="import" href="/includes/header_footer.html">
 
     <!-- ANIMACION TEXTO NOMBRE EMPRESA----- -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -32,25 +35,74 @@
         <iframe src="/includes/header.html" frameborder="0" scrolling="no"></iframe>
     </header>
     <main class="main">
-        <form action="#">
-            <h2>Pedir cita para probar una moto</h2>
+        <h2>Pedir cita para probar una moto</h2>
+        <form action="#" id="form-input" method="get" action="#" onsubmit="return validarSexo()">
             <fieldset>
                 <legend>Datos Personales:</legend>
-                    <label for="nombre">Nombre:</label>
-                    <input type="text" id="nombre">
-                    <label for="apellidos">Apellidos:</label>
-                    <input type="text" id="apellidos">
-                    <label for="telefono">Telefono:</label>
-                    <input type="tel" id="telefono">
+                <div>
+                    <section>
+                        Nombre: <input type="text" id="nombre">
+                    </section>
+                    <section>
+                        Apellidos: <input type="text" id="apellidos">
+                    </section>
+                </div>
+                <div class="sexos">
+                    Sexo:
+                    <section class="radios">
+                        Hombre<input type="radio" id="hombre" name="sexo" value="hombre">
+                    </section>
+                    <section class="radios">
+                        Mujer<input type="radio" id="mujer" name="sexo" value="mujer">
+                    </section>
+                </div>
+                <!-- !!⚠️Aunque es una validacion 'email' se debe poner el "type" como tipo 'text' para que funcione el LiveValidation-->
+                <div>
+                    <section>
+                        Email: <input type="text" id="email">
+                    </section>
+                    <section>
+                        Repetir Email: <input type="text" id="reptEmail">
+                    </section>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Peticion Cita:</legend>
+                <div>
+                    <section>Poblacion:
+                        <select name="poblaciones" id="poblaciones">
+                            <option value="0">Selecciona una opcion:</option>
+                            <option value="1">Barcelona</option>
+                            <option value="2">Valencia</option>
+                            <option value="3">Madrid</option>
+                        </select>
+                    </section>
+                    <section>
+                        Fecha y hora preferida:
+                        <input type="datetime-local">
+                    </section>
+                </div>
+                <div class="checkboxAceptar">
+                <section>Acepto recibir información <input type="checkbox" id="aceptoInfo" checked></section>
+                <section>Acepto normativa sobre proteccion de datos <input type="checkbox" id="aceptoProteccionDatos"
+                        onclick="activacionEnviar()"></section>
+                </div>
+                <div>
+                    <input type="submit" id="enviarDatos" value="Enviar datos" disabled="disabled">
+                    <input type="reset" value="Borrar">
+                </div>
             </fieldset>
         </form>
-        lorem*50
     </main>
 
     <footer class="footer">    
         <!-- Importacion del Footer------ -->
         <iframe src="/includes/footer.html" frameborder="0" scrolling="no"></iframe>
     </footer>
+    
 </div>
+<!--!!⚠️ Para que funcione el LiveValidation el link del JavaScript debe estar al final -->
+<script type="text/javascript" src="/JavaScript/formProbarMoto.js"></script>
+
 </body>
 </html>

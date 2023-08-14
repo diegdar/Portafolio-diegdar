@@ -1,11 +1,47 @@
-fieldset{
-    width: 70%;
+h2{
     text-align: center;
 }
-fieldset label{
-    margin: 10px 5px;
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+fieldset{
+    margin-top: 20px;
+    width: 90%;
+    /* display: flex; */
+    justify-content: space-around;
+    padding: 10px 0px;
+}
+legend{
+    text-align: center;
+    padding: 0px 10px;
+}
+form input:focus {
+    background-color: lightblue;
+}
+
+form section{
+    margin: 8px;
+}
+form div{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    margin: 10px;
 }
 form input{
-    /* position: absolute;
-    left: 105px; */
+    /* margin-right: 30px; */
+}
+form .radios{
+    display: flex;
+    justify-items: center;
+}
+    form .radios input{
+        margin-left: 4px;
+    }
+form .checkboxAceptar{
+    display: flex;
+    flex-direction: column;
+    font-size: 0.8em;
 }
