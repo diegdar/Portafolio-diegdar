@@ -160,7 +160,7 @@ footer{
     flex-direction: column;
     text-align: center;
     /* align-items: center; */
-    /* justify-content: center; */
+    justify-content: space-between;
     /* flex: var(--EspacioEntre-elementosFlex); */
 }
     #redesSociales section{
@@ -176,6 +176,14 @@ footer{
     justify-content: space-between;
     /* flex: var(--EspacioEntre-elementosFlex); */
 }
+    #disenador{
+        margin-top: 10px;
+    }
+    #disenador article{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 #enlacesUtiles{
     display: flex;
     flex-direction: column;

@@ -29,10 +29,19 @@
             </section>
         </div>
         <div id="politica_Privacidad">
+            <h3 href="politicaWeb#terminosCondiciones">Terminos y condiciones</h3>
             <a href="politicaWeb#privacidad.html">Politica de privacidad</a>
             <a href="politicaWeb#cookies">Política sobre cookies</a>
-            <a href="politicaWeb#terminosCondiciones">Terminos y condiciones</a>
-            <p>Copyright 2023 © motoScort · Diseñado por Diego Chacon</p>
+            <section id="disenador">Diseñado por Diego Chacon: 
+                <article>
+                    <a href="https://github.com/diegdar"><img src="../assets/iconGithub.svg" alt="icono enlace a github desarrollador web"></a>
+                    <p>Github</p>    
+                </article>
+                <article>
+                    <a href="https://diegdar.github.io/Portafolio-diegdar/"><img src="../assets/iconWebsite.svg" alt="icono sitio web desarrollador web"></a>
+                    <p>Website</p>
+                </article>
+            </section>
         </div>
         <div id="enlacesUtiles">
             <h3>Enlaces Útiles:</h3>
@@ -42,4 +51,12 @@
         </div>
     </footer>
 </body>
+<!-- El target "_parent" hace que el  <iframe> no se desaparezca al hacer click al link y que lo abra en la ventana de la pagina que lo contiene y no en nueva pestaña o en el mismo <iframe>-->
+<script>
+    links = document.getElementsByTagName("a");
+    longArray = links.length;
+    for (var i = 0; i < longArray; i++) {
+            links[i].setAttribute("target", "_parent");     
+    }
+    </script>
 </html>
