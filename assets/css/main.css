@@ -2267,7 +2267,11 @@ input, select, textarea {
 			#main > section.four {
 				background-color: #e8edec;
 			}
-
+/* contact */
+#contact figure a{
+	display: flex;
+	align-content: center;
+}
 /* Wide */
 
 	@media screen and (min-width: 961px) and (max-width: 1880px) {
