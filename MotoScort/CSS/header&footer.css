@@ -179,7 +179,7 @@ footer{
     #disenador{
         margin-top: 10px;
     }
-    #disenador article{
+    #disenador article a{
         display: flex;
         justify-content: center;
         align-items: center;
