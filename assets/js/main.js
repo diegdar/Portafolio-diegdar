@@ -116,9 +116,13 @@
 
 })(jQuery);
 // My JS--------------------------------------------------
-// Hace que todos los links se abran en otra pestaña sin cerrar la pagina principal de mi portfolio
-	links = document.getElementsByTagName("a");
-	longArray = links.length;
-	for (var i = 0; i < longArray; i++) {
-		links[i].setAttribute("target", "_blank");     
+// Hace que los links que contengan en el 'href' el valor '#' no se abran en otra pestaña, mientras que el resto de links  si se abran en otra pestaña sin cerrar la pagina principal de mi portfolio para mantener la atencion del mismo.
+links = document.querySelectorAll('a');
+longArray = links.length;
+for (var i = 0; i < longArray; i++) {
+	if (links[i].getAttribute("href").includes("#")) {
+	links[i].setAttribute("target", "_self");
+	}else{
+	links[i].setAttribute("target", "_blank"); 
 	}
+}
