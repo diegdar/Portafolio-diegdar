@@ -16,16 +16,22 @@
         <div id="redesSociales">
             <h3>Encuentranos en:</h3>
             <section>
-                <img src="../assets/iconInstagram.svg" alt="icono enlace a nuestro instagram">
-                <p>Instagram</p>
+                <a href="https://www.instagram.com/">
+                    <img src="../assets/iconInstagram.svg" alt="icono enlace a nuestro instagram">
+                    <p>Instagram</p>
+                </a>
             </section>
             <section>
-                <img src="../assets/iconFacebook.svg" alt="icono enlace a nuestro facebook">
-                <p>Facebook</p>
+                <a href="https://www.facebook.com/">
+                    <img src="../assets/iconFacebook.svg" alt="icono enlace a nuestro facebook">
+                    <p>Facebook</p>
+                </a>
             </section>
             <section>
-                <img src="../assets/iconYoutube.svg" alt="icono enlace a nuestro youtube">
-                <p>Youtube</p>
+                <a href="https://www.youtube.com/">
+                    <img src="../assets/iconYoutube.svg" alt="icono enlace a nuestro youtube">
+                    <p>Youtube</p>
+                </a>
             </section>
         </div>
         <div id="politica_Privacidad">
@@ -49,17 +55,21 @@
         <div id="enlacesUtiles">
             <h3>Enlaces Útiles:</h3>
             <a href="contactanos.html">Ponte en contacto con nosotros</a>
-            <a href="formularioProbarMoto.html">Pedir probar una moto</a>
+            <a href="../formProbarMoto.html">Pedir probar una moto</a>
             <a href="dondeEstamos.html">Concesionarios</a>
         </div>
     </footer>
 </body>
-<!-- El target "_parent" hace que el  <iframe> no se desaparezca al hacer click al link y que lo abra en la ventana de la pagina que lo contiene y no en nueva pestaña o en el mismo <iframe>-->
+<!-- Si el link contiene "../" es porque esta en una carpeta local por lo que el target tomara el valor "_parent" y hara que el  <iframe> no se desaparezca al hacer click al link y que lo abra en la ventana de la pagina padre que lo contiene. En los demas casos abrira una nueva pestaña para el link y se permanecera abierta la pagina que contiene el link-->
 <script>
-    links = document.getElementsByTagName("a");
+    links = document.getElementsByTagName('a');
     longArray = links.length;
     for (var i = 0; i < longArray; i++) {
-            links[i].setAttribute("target", "_parent");     
+        if (links[i].getAttribute("href").includes("../")) {
+        links[i].setAttribute("target", "_parent");
+        }else{
+        links[i].setAttribute("target", "_blank"); 
+        }
     }
-    </script>
+</script>
 </html>

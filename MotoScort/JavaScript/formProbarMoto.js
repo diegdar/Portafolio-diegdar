@@ -38,7 +38,7 @@
     function validarSexo(){
         if (!document.querySelector('input[name="sexo"]:checked')) 
             {
-            alert('Hay que rellenar los campos de sexo!');
+            alert('Hay que rellenar los campos de genero!');
             return false; //el form no se envía
         }else { //el form se enviará
         btn_enviar=document.getElementById("enviarDatos");

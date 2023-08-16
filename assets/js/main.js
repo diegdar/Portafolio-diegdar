@@ -117,7 +117,7 @@
 })(jQuery);
 // My JS--------------------------------------------------
 // Hace que los links que contengan en el 'href' el valor '#' no se abran en otra pestaña, mientras que el resto de links  si se abran en otra pestaña sin cerrar la pagina principal de mi portfolio para mantener la atencion del mismo.
-links = document.querySelectorAll('a');
+links = document.getElementsByTagName('a');
 longArray = links.length;
 for (var i = 0; i < longArray; i++) {
 	if (links[i].getAttribute("href").includes("#")) {
