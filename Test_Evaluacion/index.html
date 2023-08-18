@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <h2 class="cuentRegresiva" ></h2>
+
+    <h1 id="finTiempo" class="oculto">Time is up!</h1>
+
+<form action="#" id="formEvaluacion">
+    <h1>Quiz Questions</h1>
+    <p>To start the test you must click the "Start Test" button, from that moment you will have 1 minute to answer all the questions, if you have not answered all the questions when the time is up you will not be allowed to answer the missing questions and You will be shown the test result at the bottom of the page. If you finish before the end of time you can click on the "Show Results" button to see the result of the test. Good luck!</p>
+
+    <input type="button" value="Start Test" id="botonIniciarTest" onclick="IniciarTest()">
+    <input type="button" value="Show Results" id="botonCalcularResultado" onclick="calcularResultado()" disabled="disabled">
+    <input type="button" value="Clean" id="botonLimpiar" onclick="location.reload()">
+
+    <h3>Question 1:</h3>
+    <h4>What is the longest river in the world?</h4>
+    <p><input type="radio" disabled="disabled" name="rios" class="respuestas"> a. The amazon river.</p>
+    <p><input type="radio" disabled="disabled" name="rios" class="respuestas" value="1"> b. The nilon river.</p> 
+    <p><input type="radio" disabled="disabled" name="rios" class="respuestas"> c. The Volga river.</p>
+
+    <h3>Question 2:</h3>
+    <h4>What is the animal with the largest waterspout?</h4>
+    <p><input type="radio" disabled="disabled" name="animales" class="respuestas"> a. Anteater</p>
+    <p><input type="radio" disabled="disabled" name="animales" class="respuestas"> b. Hummingbird</p>
+    <p><input type="radio" disabled="disabled" name="animales" class="respuestas" value="2"> c. Elephant</p>
+
+    <h3>Question 3:</h3>
+    <h4>What is the result of the following operation: 3% 8 ?</h4>
+    <p><input type="radio" disabled="disabled" name="matematica" class="respuestas" value="3"> a. 0,375</p> 
+    <p><input type="radio" disabled="disabled" name="matematica" class="respuestas"> b. 0,1</p>
+    <p><input type="radio" disabled="disabled" name="matematica" class="respuestas"> c. 0,8</p>
+
+    <h3>Question 4:</h3>
+    <h4>What is the speed of light?</h4>
+    <p><input type="radio" disabled="disabled" name="fisica" class="respuestas" value="4"> a. 299,792.458 km. per second</p> 
+    <p><input type="radio" disabled="disabled" name="fisica" class="respuestas"> b. 300,000 km. per hour</p>
+    <p><input type="radio" disabled="disabled" name="fisica" class="respuestas"> c. 125,000 km per square meter</p>
+
+    <h3>Question 5:</h3>
+    <h4>To find the area of a circle you have to:</h4>
+    <p><input type="radio" disabled="disabled" name="geometria" class="respuestas"> a. Divide "pi" by the radius squared (A = π / r²)</p> 
+    <p><input type="radio" disabled="disabled" name="geometria" class="respuestas" value="5"> b. Multiply "pi" by the radius squared (A = π r²)</p>
+    <p><input type="radio" disabled="disabled" name="geometria" class="respuestas"> c. Add "pi" to the radius and then square it (A = (π + r)²)</p>
+<div id="tabla">
+    <table class="oculto" id="tablaResult">
+        <tr >
+            <td colspan="2">
+                <progress id="barraProgreso" value="" max="5"></progress>
+            </td>
+        </tr>
+        <tr>
+            <td>Correct answers:</td>
+            <td id="respCorrect"></td>
+        </tr>
+        <tr>
+            <td>Wrong Answers:</td>
+            <td id="respIncorrect"></td>
+        </tr>
+        <tr>
+            <td>Answers DK/NA:</td>
+            <td id="respNsnc"></td>
+        </tr>
+        <tr>
+            <td>Number of correct questions:</td>
+            <td id="numRespCorrect"></td>
+        </tr>
+        <tr>
+            <td>Number of incorrect questions:</td>
+            <td id="numRespIncorrect"></td>
+        </tr>
+        <tr>
+            <td>Punctuation:</td>
+            <td id="porcentCorrect"></td>
+        </tr>
+        <tr>
+            <td>Solution:</td>
+            <td id="soluRespCorrect"></td>
+        </tr>
+    </table>
+</div>
+</form>
+
+<script  src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+body{
+    background-color: #ffdd4f;
+    font-family: 'Ubuntu', sans-serif;
+}
+h1{
+    text-align: center;
+}
+#finTiempo{
+    text-align: center;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    position: sticky;
+    top: 5px;
+}
+#tabla{
+    display: flex;
+    justify-content: center;
+}
+tr, td{
+    border: 2px solid black;
+    text-align: center;
+}
+.cuentRegresiva{
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    position: sticky;
+    top: 5px;
+    display: block;
+}
+.oculto {
+    display: none;
+}
+.visible{
+    display: block;
+}
