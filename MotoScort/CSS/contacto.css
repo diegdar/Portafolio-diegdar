@@ -1,0 +1,83 @@
+h1{
+    margin-top: 70px;
+}
+main{
+    /* permite que  no lo pise el header y funcione link*/
+    margin-top: 90px;
+    display: flex;
+    justify-content: space-around;
+}
+    aside section{
+        display: flex;
+        border-left: white 2px solid;
+        padding-left: 20px;
+        margin-top: 20px;
+
+    }
+    aside img{
+        width: 40px;
+    }
+    aside article{
+        margin-left: 20px;
+    }
+    aside article a{
+        font-size: 1.5em;
+    }
+h2{
+    text-align: center;
+}
+form{
+    align-items: center;
+    border-color: white 2px solid;
+    box-shadow: 0px 0px 10px white;
+    width: 450px;
+}
+fieldset{
+    margin: 20px;
+    width: 90%;
+    justify-content: space-around;
+    padding: 10px 0px;
+}
+legend{
+    text-align: center;
+    padding: 0px 10px;
+}
+form input:focus {
+    background-color: lightblue;
+}
+    form #textConsulta p{
+        margin-bottom: 3px;
+    }
+    form #textConsulta{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+form div{
+    display: flex;
+    justify-content:center;
+    align-items: flex-start;
+    text-align: center;
+    margin: 10px;
+}
+    form div section{
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+    }
+.sexos{
+    align-items: center;
+
+}
+form .radios{
+    display: flex;
+    justify-items: center;
+}
+    form .radios input{
+        margin-left: 4px;
+    }
+form .checkboxAceptar {
+    display:flex;
+    font-size: 0.8em;
+    align-items: flex-start;
+}

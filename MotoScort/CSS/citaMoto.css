@@ -1,0 +1,60 @@
+main{
+    /* permite que  no lo pise el header y funcione link*/
+    margin-top: 70px;
+    display: flex;
+    justify-content: space-around;
+}
+h2{
+    text-align: center;
+}
+form{
+    align-items: center;
+    border-color: white 2px solid;
+    box-shadow: 0px 0px 10px white;
+    width: 90%;
+    min-width: 300px;
+}
+fieldset{
+    margin: 20px;
+    min-width: 320px;
+    justify-content: space-around;
+    padding: 10px 0px;
+}
+legend{
+    text-align: center;
+    padding: 0px 10px;
+}
+form input:focus {
+    background-color: lightblue;
+}
+form p{
+    text-align: center;
+}
+form div{
+    display: flex;
+    justify-content:center;
+    align-items: flex-start;
+    text-align: center;
+    margin: 10px;
+}
+    form div section{
+    display: flex;
+    flex-direction: column;
+    margin: 8px;
+    }
+.sexos{
+    align-items: center;
+
+}
+form .radios{
+    display: flex;
+    justify-items: center;
+}
+    form .radios input{
+        margin-left: 4px;
+    }
+form .checkboxAceptar {
+    display:flex;
+    font-size: 0.8em;
+    align-items: flex-start;
+}

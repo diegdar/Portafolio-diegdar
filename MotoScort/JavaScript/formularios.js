@@ -15,7 +15,7 @@
         let confiEmail = new LiveValidation('reptEmail', { validMesage: "Valid!"});
         confiEmail.add(Validate.Confirmation, {match: 'email'});
     // Comprueba que se haya seleccionado una opcion
-        let poblaciones = new LiveValidation ('poblaciones');
+        let poblaciones = new LiveValidation ('opcDesplegable');
         poblaciones.add(Validate.Exclusion, { within: ['0'], failureMessage: "Selecciona un valor!"});
     // Valida si hay texto dento de la caja y haya como maximo entre 3 y 200 caracteres
         let descripcion = new LiveValidation ('descripcion');
@@ -24,7 +24,14 @@
     // Valida que este seleccionado el ckeckbox de acepto Proteccion de Datos
     let aceptoProteccionDatos = new LiveValidation('aceptoProteccionDatos', {validMessage: "OK!"});
     aceptoProteccionDatos.add(Validate.Acceptance);
+    // VALIDA INTRODUCCION FECHA
+        // Crear una nueva instancia de LiveValidation para el campo de fecha
+        fechaInput = document.getElementById('fechaCita');
+        fechaValidacion = new LiveValidation(fechaInput);
 
+        // Agregar la validación de fecha al campo de entrada
+        fechaValidacion.add(Validate.Presence, { failureMessage: "La fecha es requerida." });
+        fechaValidacion.add(Validate.Date, { format: 'dd/mm/yyyy', failureMessage: "La fecha debe tener el formato dd/mm/yyyy." });
     // Habilita o Deshabilita el boton enviar si el usuario le ha dado click al checkbox
     function activacionEnviar(){
         checkEnviarDatos = document.getElementById("aceptoProteccionDatos");

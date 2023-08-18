@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Conexion con CSS --------->
         <link rel="stylesheet" href="CSS/general.css">
-        <link rel="stylesheet" href="CSS/formularios.css">
+        <link rel="stylesheet" href="CSS/citaMoto.css">
     <!-- Conexion con LiveValidtion-------- -->
         <script type="text/javascript" src="livevalidation/src/livevalidation_standalone.js"></script>
         <link rel="stylesheet" href="livevalidation/test/css/validation.css">
@@ -35,8 +35,9 @@
         <iframe src="includes/header.html" frameborder="0" scrolling="no"></iframe>
     </header>
     <main class="main">
-        <h2>Pedir cita para probar una moto</h2>
         <form action="#" id="form_CitaMoto" method="get" action="#" onsubmit="return validarSexo()">
+            <h1>Cita para probar una moto</h1>
+            <p>Puedes agendar una cita para probar una de nuestras motos, solo debes rellenar el siguiente formulario y te confirmaremos la cita a tu email. </p>
             <fieldset>
                 <legend>Datos Personales:</legend>
                 <div>
@@ -73,16 +74,18 @@
                 <legend>Peticion Cita:</legend>
                 <div>
                     <section>Poblacion:
-                        <select name="poblaciones" id="poblaciones">
+                        <select name="poblaciones" id="opcDesplegable">
                             <option value="0">Selecciona una opcion:</option>
                             <option value="1">Barcelona</option>
                             <option value="2">Valencia</option>
                             <option value="3">Madrid</option>
                         </select>
                     </section>
+                </div>
+                <div>
                     <section>
                         Fecha y hora preferida:
-                        <input type="datetime-local">
+                        <input type="datetime-local" id="fechaCita">
                     </section>
                 </div>
                 <div class="checkboxAceptar">
@@ -105,7 +108,7 @@
     
 </div>
 <!--!!⚠️ Para que funcione el LiveValidation el link del JavaScript debe estar al final -->
-<script type="text/javascript" src="JavaScript/formProbarMoto.js"></script>
+<script type="text/javascript" src="JavaScript/formularios.js"></script>
 
 </body>
 </html>

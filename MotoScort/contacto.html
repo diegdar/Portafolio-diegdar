@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Conexion con CSS --------->
         <link rel="stylesheet" href="CSS/general.css">
-        <link rel="stylesheet" href="CSS/formularios.css">
+        <link rel="stylesheet" href="CSS/contacto.css">
     <!-- Conexion con LiveValidtion-------- -->
         <script type="text/javascript" src="livevalidation/src/livevalidation_standalone.js"></script>
         <link rel="stylesheet" href="livevalidation/test/css/validation.css">
@@ -26,25 +26,53 @@
     <!-- ANIMACION TEXTO NOMBRE EMPRESA----- -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     
-    <title>MotoScort:Form Probar moto</title>
+    <title>MotoScort:Contacto</title>
 </head>
 <body>
 <div class="container">
     <header class="header">    
         <!-- Importacion de la cabecera, barra de navegacion y miniMenu------ -->
         <iframe src="includes/header.html" frameborder="0" scrolling="no"></iframe>
+        <h1>Contacto</h1>
     </header>
     <main class="main">
-        <h2>Pedir cita para probar una moto</h2>
+        <aside>
+            <section>
+                <img src="assets/iconPhone-White.svg" alt="link para llamarnos al telefono 937245612">
+                <article>
+                    <p>Puedes llamarnos al:</p>
+                    <a href="tel:34-900123456">
+                        +34900123456
+                    </a>
+                </article>
+            </section>
+            <section>
+                <img src="assets/iconEmail-White.svg" alt="link para enviar un email a motoScort">  
+                <article>
+                    <p>Email:</p>
+                    <a href="mailto:info@motoscort.com">
+                        info@motoscort.com               
+                    </a>
+                </article>
+            </section>
+            <section id="mapLocation">
+                <img src="assets/iconMap-White.svg" alt="link para enviar un email a motoScort">  
+                <article>
+                    <p>Donde Estamos:</p>
+                    Plaza Cataluña, 1, Barcelona (Esp.)
+                </section>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2993.4536743017275!2d2.1663579752631796!3d41.38595297130011!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12a4a2f3f9ad7c27%3A0xed9ac3f47b3a658!2sPl.%20de%20Catalunya%2C%201%2C%2008002%20Barcelona!5e0!3m2!1ses!2ses!4v1692355760100!5m2!1ses!2ses" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>                </article>
+        </aside>
         <form action="#" id="form_Contacto" method="get" action="#" onsubmit="return validarSexo()">
-            <fieldset>
-                <legend>Datos Personales:</legend>
+            <h2>Envíanos una consulta:</h2>
                 <div>
                     <section>
-                        Nombre: <input type="text" id="nombre">
+                        Nombre: 
+                        <input type="text" id="nombre">
                     </section>
                     <section>
-                        Apellidos: <input type="text" id="apellidos">
+                        Apellidos: 
+                        <input type="text" id="apellidos">
                     </section>
                 </div>
                 <div class="sexos">
@@ -68,36 +96,39 @@
                         Repetir Email: <input type="text" id="reptEmail">
                     </section>
                 </div>
-            </fieldset>
-            <fieldset>
-                <legend>Peticion Cita:</legend>
                 <div>
-                    <section>Poblacion:
-                        <select name="poblaciones" id="poblaciones">
+                    <section>
+                        Tipo de consulta:
+                        <select name="recambios" id="opcDesplegable">
                             <option value="0">Selecciona una opcion:</option>
-                            <option value="1">Barcelona</option>
-                            <option value="2">Valencia</option>
-                            <option value="3">Madrid</option>
+                            <option value="4">Recambios</option>
+                            <option value="5">Accesorios</option>
+                            <option value="6">Servicios</option>
+                            <option value="7">Otros</option>
                         </select>
                     </section>
-                    <section>
-                        Fecha y hora preferida:
-                        <input type="datetime-local">
-                    </section>
+                </div>
+                <div id="textConsulta">
+                    <p>Mensaje:</p> 
+                    <textarea name="descripcion" id="descripcion" cols="30" rows="10" placeholder="Escribe un máximo de 200 caracteres"></textarea>
                 </div>
                 <div class="checkboxAceptar">
-                <section>Acepto recibir información <input type="checkbox" id="aceptoInfo" checked></section>
-                <section>Acepto normativa sobre proteccion de datos <input type="checkbox" id="aceptoProteccionDatos"
-                        onclick="activacionEnviar()"></section>
+                <section>
+                    Acepto recibir información
+                    <input type="checkbox" id="aceptoInfo" checked>
+                </section>
+                <section >
+                    Acepto normativa sobre proteccion de datos 
+                    <input type="checkbox" id="aceptoProteccionDatos"
+                        onclick="activacionEnviar()">
+                </section>
                 </div>
                 <div>
-                    <input type="submit" id="enviarDatos" value="Enviar datos" disabled="disabled">
+                    <input type="submit" id="enviarDatos" value="Enviar mensaje" disabled="disabled">
                     <input type="reset" value="Borrar">
                 </div>
-            </fieldset>
         </form>
     </main>
-
     <footer class="footer">    
         <!-- Importacion del Footer------ -->
         <iframe src="includes/footer.html" frameborder="0" scrolling="no"></iframe>
@@ -105,7 +136,7 @@
     
 </div>
 <!--!!⚠️ Para que funcione el LiveValidation el link del JavaScript debe estar al final -->
-<script type="text/javascript" src="JavaScript/formProbarMoto.js"></script>
+<script type="text/javascript" src="JavaScript/formularios.js"></script>
 
 </body>
 </html>
