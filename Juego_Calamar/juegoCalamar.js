@@ -6,7 +6,7 @@ function juegoAleatorio(){
     do{
         numUsuario = Number( prompt(`Dime un numero del 1 al 10`, `tienes ${i} intentos.`))
         intentos++;
-        
+
         if(isNaN(numUsuario)|| (numUsuario<=0 || numUsuario>10) ){
             alert("Has introducido mal los datos, recuerda que debe ser un numero entre 1 y 10");
         }else if(numUsuario!=aleatorio && i>1){
@@ -17,7 +17,6 @@ function juegoAleatorio(){
             }
         }else if(numUsuario==aleatorio){
             alert("En hora buena. HAS ACERTADO!");
-            document.getElementById("imagenGif").src = "victoria.gif";
             break;
         }
         i--;
