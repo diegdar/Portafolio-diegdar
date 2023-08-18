@@ -1,9 +1,15 @@
 body{
-    background-color: #ffdd4f;
+    background-color: #63bf6a;
     font-family: 'Ubuntu', sans-serif;
 }
 h1{
     text-align: center;
+}
+h3{
+    -webkit-box-shadow: 18px 1px 24px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 18px 1px 24px 0px rgba(0,0,0,0.75);
+    box-shadow: 18px 1px 24px 0px rgba(0,0,0,0.75);
+    width: 100px;
 }
 #finTiempo{
     text-align: center;

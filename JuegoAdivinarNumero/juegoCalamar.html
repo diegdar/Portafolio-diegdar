@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="juegoCalamar.css">
+    <title>Document</title>
+</head>
+<body>
+    <section class="colorFondo">
+        <h4 id="textFondo">Cambiar fondo</h4>
+        <article>
+            <button id="estiloOscuro" class="botonesEstiloFondo" onclick="estiloColorFondo(1)"></button>
+            <button id="estiloNormal" class="botonesEstiloFondo" onclick="estiloColorFondo(2)"></button>
+        </article>
+    </section>
+    <div>
+        <section id="caja">
+            <h3 id="encabezado">EL JUEGO DEL CALAMAR:</h3>
+            <p id="texto">Adivida un numero aleatorio del 1 al 10. Si no aciertas, estas muerto...xD.</p>
+    
+            <section id="botonesInfo">
+                <button id="comenzar" class="botones" onclick="juegoAleatorio()">COMENZAR!</button>
+                <p id="intentos" class="botones">--</p>
+                <p id="numeroAleatorio" class="botones">--</p>
+            </section>
+    </div>
+</section>
+<div >
+    <img src="ojos_muneca.gif" alt="gif muneca juego del calamar" id="imagenGif">
+</div>
+
+</body>
+<script src="juegoCalamar.js"></script>
+</html>
