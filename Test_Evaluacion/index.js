@@ -83,7 +83,7 @@ function calcularResultado(){
 contador = 60;
 function inicioTiempo(){
     // Muestra aviso cuenta regresiva
-    document.querySelector(".cuentRegresiva").innerHTML = `Time left: ${contador} segundos`;
+    document.querySelector(".cuentRegresiva").innerHTML = `Time left: ${contador} seconds`;
     // Disminuye en una unidad cada vez que es llamada esta funcion por el 'setInterval'
     contador--;
     if(contador == 0){
