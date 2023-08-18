@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    #finTiempo{
+        text-align: center;
+        background-color: red;
+        color: white;
+        font-weight: bold;
+        position: sticky;
+        top: 5px;
+    }
+    tr, td{
+        border: 2px solid black;
+    }
+    .cuentRegresiva{
+        text-align: center;
+        background-color: black;
+        color: white;
+        font-weight: bold;
+        position: sticky;
+        top: 5px;
+        display: block;
+    }
+    .oculto {
+        display: none;
+    }
+    .visible{
+        display: block;
+    }
+</style>
+<body>
+    <!--
+        !!!ADEMAS QUE LA ACTIVIDAD CUESTIONARIO TAMBIEN:
+Crear un contador (temporizador), por ejemplo de 10 segundos para un cuestionario conel  método setInterval. El aspecto del contador se muestra en las siguientes imágenes.
+Cuando el temporizador llega a 0 segundos aparece el aviso “!Se terminó el tiempo! con
+un fondo rojo. El temporizador se iniciará cuando se pulse un botón que hay que añadir al
+cuestionario llamado “Iniciar Test”.
+ Añadir otro botón llamado “Limpiar” que resetee el formulario, es decir, vuelva a su
+estado inicial, sin ningúna opción seleccionada.
+        
+Una vez cargado el cuestionario en el navegador el estado inicial de los botones deben
+ser:
+o Boton “Iniciar Test” su estado debe ser habilitado.
+o Boton “Calcular Resultado” su estado debe ser deshabilitado.
+o Boton “Limpiar” su estado debe ser habilitado.
+o Botones de opción radio deshabilitados.
+ Una vez pulsado el boton “Iniciar Test” el estado de los botones deben ser:
+o Boton “Iniciar Test” su estado debe ser deshabilitado.
+o Boton “Calcular Resultado” su estado debe ser habilitado.
+o Boton “Limpiar” su estado debe ser habilitado.
+o Botones de opción radio habilitados.
+ Una vez pulsado el boton “Calcular resultado” el estado de los botones deben ser:
+o Boton “Iniciar Test” su estado debe ser habilitado.
+o Boton “Calcular Resultado” su estado debe ser deshabilitado.
+o Boton “Limpiar” su estado debe ser habilitado.
+o Botones de opción radio deshabilitados. -->
+
+    <h2 class="cuentRegresiva" ></h2>
+
+    <h1 id="finTiempo" class="oculto">¡Se termino el Tiempo!</h1>
+
+<form action="#" id="formEvaluacion">
+    <h2>Test de Preguntas</h2>
+    <h3>Pregunta 1:</h3>
+    <h4>¿Cual es el rio mas largo del mundo?</h4>
+    <p><input type="radio" disabled="disabled" name="rios" class="respuestas" value="7"> a. El Amazonas</p>
+    <p><input type="radio" disabled="disabled" name="rios" class="respuestas" value="1"> b. El Nilo</p> 
+    <p><input type="radio" disabled="disabled" name="rios" class="respuestas"> c. El Rin</p>
+
+    <h3>Pregunta 2:</h3>
+    <h4>¿Cual es el animal con la tromba mas grande?</h4>
+    <p><input type="radio" disabled="disabled" name="animales" class="respuestas"> a. El Oso hormiguero</p>
+    <p><input type="radio" disabled="disabled" name="animales" class="respuestas"> b. El colibri</p>
+    <p><input type="radio" disabled="disabled" name="animales" class="respuestas" value="2"> c. El Elefante</p>
+
+    <h3>Pregunta 3:</h3>
+    <h4>¿Cual es el resultado de la siguiente operacion:  3 % 8 ?</h4>
+    <p><input type="radio" disabled="disabled" name="matematica" class="respuestas" value="3"> a. 0,375</p> 
+    <p><input type="radio" disabled="disabled" name="matematica" class="respuestas"> b. 0,1</p>
+    <p><input type="radio" disabled="disabled" name="matematica" class="respuestas"> c. 0,8</p>
+
+    <input type="button" value="Iniciar Test" id="botonIniciarTest" onclick="IniciarTest()">
+    <input type="button" value="Calcular resultado" id="botonCalcularResultado" onclick="calcularResultado()" disabled="disabled">
+    <input type="button" value="Limpiar" id="botonLimpiar" onclick="location.reload()">
+
+    <progress id="barraProgreso" value="" max="3"></progress>
+
+    <table class="oculto" id="tablaResult">
+        <tr>
+            <td>Respuestas Correctas:</td>
+            <td id="respCorrect"></td>
+        </tr>
+        <tr>
+            <td>Respuestas Incorrectas:</td>
+            <td id="respIncorrect"></td>
+        </tr>
+        <tr>
+            <td>Respuestas NS/NC:</td>
+            <td id="respNsnc"></td>
+        </tr>
+        <tr>
+            <td>Nº preguntas acertadas:</td>
+            <td id="numRespCorrect"></td>
+        </tr>
+        <tr>
+            <td>Nº preguntas Incorrectas:</td>
+            <td id="numRespIncorrect"></td>
+        </tr>
+        <tr>
+            <td>Puntuación:</td>
+            <td id="porcentCorrect"></td>
+        </tr>
+        <tr>
+            <td>Solución:</td>
+            <td id="soluRespCorrect"></td>
+        </tr>
+    </table>
+    
+    <script>
+        contRespCorrect =0;
+        contRespIncorrect =0;
+        contRespNsc=0;
+        arrayAcertadas=[];
+        arrayIncorrectas=[];
+        barraProgres = document.getElementById("barraProgreso");
+
+        // Las posiciones de los numeros que son mayores a uno son las respuestas CORRECTAS y a la vez el nº de pregunta.
+        posicionCorrectas =   [0,1,0,0,0,2,3,0,0];
+        // Las posiciones de los numeros que son mayores a uno son las respuestas INCORRECTAS y a la vez el nº de pregunta.
+        posicionIncorrectas = [1,0,1,2,2,0,0,3,3];
+
+        function IniciarTest(){
+        // LLama a la funcion inicioTiempo cada 1 segundo
+        temps = setInterval(inicioTiempo,1000);
+
+        // Deshabilita el boton 'botonIniciarTest'
+        document.getElementById('botonIniciarTest').disabled = true;
+        // Habilita el boton 'botonCalcularResultado'
+        document.getElementById('botonCalcularResultado').disabled = false;
+        // habilita los botones 'radio'
+            radios = document.getElementsByClassName("respuestas");
+
+            for(i=0; i<radios.length; i++){
+                radios[i].disabled = false;
+            }
+
+    }
+        
+    function calcularResultado(){
+        // LLama a 'clearInterval' para parar a 'setInterval' y ocultar aviso cuenta regresiva
+        finTiempo();        
+
+        // Deshabilita el boton 'botonIniciarTest'
+        document.getElementById('botonIniciarTest').disabled = true;
+        // Deshabilita el boton 'botonCalcularResultado'
+        document.getElementById('botonCalcularResultado').disabled = true;
+        // Deshabilita los botones 'radio'
+            radios = document.getElementsByClassName("respuestas");
+            for(i=0; i<radios.length; i++){
+                radios[i].disabled = true;
+            }
+
+        opciones = document.getElementsByClassName("respuestas");
+        cantidadPreguntas = 3;
+        for(i=0; i<opciones.length;i++){
+            prueba = opciones[i].checked;
+            prueba2 = Number(opciones[i].value);
+
+            if(opciones[i].checked && opciones[i].value==posicionCorrectas[i]){
+                contRespCorrect++;
+                arrayAcertadas.push(posicionCorrectas[i]);
+
+            }else if(opciones[i].checked && opciones[i].value!=posicionCorrectas[i]){
+                contRespIncorrect++;
+                arrayIncorrectas.push(posicionIncorrectas[i]);
+            }
+        }
+        contRespNsc= cantidadPreguntas-(contRespCorrect + contRespIncorrect);
+        // le dara el valor de las resp. correctas a la barra azul de progreso.
+        barraProgreso.setAttribute("value", contRespCorrect);
+
+        document.getElementById("respCorrect").innerHTML = contRespCorrect;
+        document.getElementById("respIncorrect").innerHTML = contRespIncorrect;
+        document.getElementById("respNsnc").innerHTML = contRespNsc;
+
+            document.getElementById("numRespCorrect").innerHTML = arrayAcertadas;
+
+            document.getElementById("numRespIncorrect").innerHTML = arrayIncorrectas;
+        // ----------------------
+
+        document.getElementById("porcentCorrect").innerHTML = `${(contRespCorrect*100/3).toFixed(2)}%`;
+        
+        document.getElementById("soluRespCorrect").innerHTML = 'b, c, a';
+
+        // Mostrar tabla resultados
+        let tablaResult = document.getElementById("tablaResult");
+
+        tablaResult.classList.toggle("visible");
+
+    }
+
+    contador = 10;
+    function inicioTiempo(){
+        // Muestra aviso cuenta regresiva
+        document.querySelector(".cuentRegresiva").innerHTML = `Tiempo restante: ${contador} segundos`;
+        // Diminuye en una unidad cada vez que es llamada esta funcion por el 'setInterval'
+        contador--;
+        if(contador == 0){
+
+            // Muestra aviso termino tiempo
+            let finTiempo = document.querySelector('.oculto');
+            finTiempo.classList.toggle('visible');
+
+            // Deshabilita los botones 'radio'
+            radios = document.getElementsByClassName("respuestas");
+            for(i=0; i<radios.length; i++){
+                radios[i].disabled = true;
+            }
+            // Llama a la funcion 'calcularResultado()' para que muestre los resultados cuando se ha terminado el tiempo
+            calcularResultado()            
+
+            // LLama a 'clearInterval' para parar a 'setInterval' y ocultar aviso cuenta regresiva
+            finTiempo();            
+
+        }
+    }
+
+    function finTiempo(){
+        // detiene la variable 'temps' que contiene el 'setInterval' cuando la cuenta regresiva llegue a 0
+        clearInterval(temps);     
+        
+        // Oculta aviso cuenta regresiva
+        cuentaRegre = document.querySelector('.cuentRegresiva');
+        cuentaRegre.classList.toggle('oculto');
+        
+    }
+
+    </script>
+
+</form>
+</body>
+</html>

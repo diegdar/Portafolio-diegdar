@@ -21,7 +21,7 @@
     }
 }    
 .galeriaImagenes img{
-        width: 95%;
+        width: 130%;
         height: 200px;
         /* Le da la forma a la galeria de imagenes */
         clip-path: polygon(75% 0%, 97% 51%, 75% 100%, 0% 100%, 13% 52%, 0% 0%);
@@ -44,6 +44,7 @@
         flex:1;
         text-align: center;
         background-color: #c31f24;
+        height: 230px;
     }
     #reclamos section:nth-child(2){
         border-left: 1px white dashed;
