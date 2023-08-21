@@ -1,5 +1,6 @@
 function juegoAleatorio(){
-    aleatorio = Math.round(Math.random()*10);
+    // aleatorio = Math.round(Math.random()*10);
+    aleatorio = 4;
 
     i=3;
     intentos = 0;
@@ -17,6 +18,8 @@ function juegoAleatorio(){
             }
         }else if(numUsuario==aleatorio){
             alert("En hora buena. HAS ACERTADO!");
+            document.getElementById("imagenGif").src = "victoria.gif";
+
             break;
         }
         i--;
