@@ -54,7 +54,6 @@ var tareas = [];
         // Esto asegura que el campo esté limpio y listo para que el usuario pueda ingresar una nueva tarea sin tener que borrar manualmente el texto anterior.
         textoCaja.value = "";
         }
-    document.getElementById("valorArray").innerHTML = tareas;
     }
     // hace que llame a la funcion 'agregarTarea()' tambien al darle intro/enter(que representa el nº 13) a demas de poder hacerlo al darle click al boton 'Agregar'. ⚠️Es importante poner la variable 'textoCaja' antes del 'addEventListener' para que solo actue el envento del intro en la caja del input que queremos.
     var textoCaja = document.getElementById("cajaTexto");
