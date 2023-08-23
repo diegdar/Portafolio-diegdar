@@ -1,0 +1,11 @@
+.estiloBoton{
+    background: url('/img/cross-296507_1280.png') no-repeat center;
+    background-size: contain;    
+    height: 16px;    
+    width: 16px;
+    border: none;
+    
+}
+.tachado{
+    text-decoration: line-through; /* texto tachado */
+}
