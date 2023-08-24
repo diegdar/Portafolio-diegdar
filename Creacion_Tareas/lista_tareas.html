@@ -10,13 +10,15 @@
 
 <body>
   <h1>LISTA DE TAREAS</h1>
-  <ul id="contenedor">
-  </ul>
-  <form action="#">
-    <input type="text" id="cajaTexto" placeholder="Agregar nueva tarea">
-    <button onclick="agregarTarea()">Agregar</button>
-  </form>
-  <p id="valorArray"></p>
+    <section>
+      <input type="text" id="cajaTexto" placeholder="Agregar nueva tarea">
+      <button onclick="agregarTarea()">Agregar</button>
+      <button onclick="borrarSeleccionados()">Borrar Seleccionadas</button>
+    <section>
+      <input type="checkbox" id="seleccionarTodas" onclick="seleccionarTodo()"><label for="seleccionarTodas" >seleccionar Todas</label>
+      <ul id="padre">
+
+      </ul>
 
   <script src="lista_tareas.js"></script>
 </body>
