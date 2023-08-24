@@ -52,11 +52,21 @@ textoCaja.addEventListener("keyup", function(event) {//*keyup:nota3
   }
 });
 // Selecciona todos los checkboxes
+var selectDes = 0;
 function seleccionarTodo() {
   var long = tareasCreadas.length;
-  for (var i = 0; i < long; i++) {
-    var checkbox = tareasCreadas[i].querySelector('input[type="checkbox"]');
-    checkbox.checked = true;
+  if(selectDes==0){
+    for (var i = 0; i < long; i++) {
+      var checkbox = tareasCreadas[i].querySelector('input[type="checkbox"]');
+      checkbox.checked = true;
+      selectDes = 1;
+    }
+  }else if(selectDes==1){
+    for (var i = 0; i < long; i++) {
+      var checkbox = tareasCreadas[i].querySelector('input[type="checkbox"]');
+      checkbox.checked = false;
+      selectDes = 0;
+    }
   }
 }
 // Elimina todas las tareas seleccionadas
