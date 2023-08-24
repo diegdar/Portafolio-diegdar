@@ -27,6 +27,10 @@ function crearNuevaTarea(textoCajaValue) {
 
     }
   });
+  // crea el evento que eliminara una tarea (etiqueta li)
+  botonBorrar.addEventListener('click', function() {
+    this.parentNode.remove();
+  });
   return nuevaTarea;
 }
 // Función para agregar una tarea

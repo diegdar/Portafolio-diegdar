@@ -9,6 +9,13 @@ h1{
     border: none;
     
 }
+.botones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    
+}
 .tachado{
     text-decoration: line-through; /* texto tachado */
 }

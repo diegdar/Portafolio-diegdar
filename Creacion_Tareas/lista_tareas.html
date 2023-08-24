@@ -10,16 +10,17 @@
 
 <body>
   <h1>LISTA DE TAREAS</h1>
-    <section>
+    <section class="botones">
       <input type="text" id="cajaTexto" placeholder="Agregar nueva tarea">
       <button onclick="agregarTarea()">Agregar</button>
       <button onclick="borrarSeleccionados()">Borrar Seleccionadas</button>
-    <section>
-      <input type="checkbox" id="seleccionarTodas" onclick="seleccionarTodo()"><label for="seleccionarTodas" >seleccionar/Quitar Seleccion de Todas</label>
+      <input type="checkbox" id="seleccionarTodas" onclick="seleccionarTodo()"><label for="seleccionarTodas" >Seleccionar/Quitar Seleccion de Todas</label>
+    </section>
+    <section class="listaTareas">
       <ul id="padre">
 
       </ul>
-
+    </section>
   <script src="lista_tareas.js"></script>
 </body>
 
