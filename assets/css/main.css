@@ -210,6 +210,27 @@ input, select, textarea {
 		max-width: 100%;
 		width: 1400px;
 	}
+	.intro{
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+		.intro h2{
+			background-color: #40484e;
+			opacity:90%;
+			width: fit-content;
+			padding: 5px;
+			border-radius: 10px;
+			
+		}
+		.intro p{
+			background-color: #40484e;
+			color: white;
+			padding: 10px;
+			opacity:80%;
+			border-radius: 10px;
+
+		}
 
 		@media screen and (min-width: 961px) and (max-width: 1880px) {
 
@@ -2258,7 +2279,7 @@ input, select, textarea {
 
 			#main > section.one {
 				background-color: #81918E;
-				background-image: url("../../images/banner.jpg");
+				background-image: url("../../images/fondo_panoramico_codigo.jpg");
 			}
 
 			#main > section.two {
