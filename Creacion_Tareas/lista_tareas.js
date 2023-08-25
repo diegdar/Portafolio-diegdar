@@ -55,21 +55,22 @@ textoCaja.addEventListener("keyup", function(event) {//*keyup:nota3
     agregarTarea();
   }
 });
-// Selecciona todos los checkboxes
-var selectDes = 0;
+var seleccionado = false;
 function seleccionarTodo() {
   var long = tareasCreadas.length;
-  if(selectDes==0){
+// Selecciona todos los checkboxes
+  if(seleccionado==false){
     for (var i = 0; i < long; i++) {
       var checkbox = tareasCreadas[i].querySelector('input[type="checkbox"]');
       checkbox.checked = true;
-      selectDes = 1;
+      seleccionado = true;
     }
-  }else if(selectDes==1){
+// Quita la seleccion de todos los checkboxes
+  }else if(seleccionado==true){
     for (var i = 0; i < long; i++) {
       var checkbox = tareasCreadas[i].querySelector('input[type="checkbox"]');
       checkbox.checked = false;
-      selectDes = 0;
+      seleccionado = false;
     }
   }
 }
