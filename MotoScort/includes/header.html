@@ -68,17 +68,19 @@
     </section>
 </div>
 </body>
-<!-- Si el link contiene "../" es porque esta en una carpeta local por lo que el target tomara el valor "_parent" y hara que el  <iframe> no se desaparezca al hacer click al link y que lo abra en la ventana de la pagina padre que lo contiene. En los demas casos abrira una nueva pestaña para el link y se permanecera abierta la pagina que contiene el link-->
+<!-- Si el link contiene "MotoScort" es porque esta en una carpeta local por lo que el target tomara el valor "_parent" y hara que el  <iframe> no se desaparezca al hacer click al link y que lo abra en la ventana de la pagina padre que lo contiene. En los demas casos abrira una nueva pestaña para el link y se permanecera abierta la pagina que contiene el link-->
 <script>
-links = document.getElementsByTagName('a');
-longArray = links.length;
-for (var i = 0; i < longArray; i++) {
-    if (links[i].getAttribute("href").includes("../")) {
-    links[i].setAttribute("target", "_parent");
-    }else{
-    links[i].setAttribute("target", "_blank"); 
+    links = document.getElementsByTagName('a');
+    longArray = links.length;
+    for (var i = 0; i < longArray; i++) {
+        if (links[i].getAttribute("href").includes("MotoScort")) {
+            // Impide que los links se abran en el iframe
+            links[i].setAttribute("target", "_parent");
+        }else{
+            // hace que los links que son propios de la pagina abran en una pestaña
+            links[i].setAttribute("target", "_blank"); 
+        }
     }
-}
 
 </script>
 </html>

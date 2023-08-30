@@ -45,12 +45,12 @@ a:hover{
   .footer { grid-area: footer; }
   
 main{
-    margin-top: 70px;
+    margin-top: 10px;
 }
 /* IFRAME:  Header y Footer--------------- */
 header iframe{
     width: 97vw;
-    height: 35vh;
+    height: 100vh;
     z-index: 100;
     position: fixed;
 }

@@ -4,6 +4,7 @@
     --EspacioEntre-elementosFlex: 1;
     --Formato-Link: white;
     --Formato-Link_hover: yellow;
+    --BordeRadius-Menu: 10px;
 }
 *{
 margin: 0;
@@ -68,7 +69,6 @@ a:hover{
     color: #e9be44;
     top: 0px;
     text-shadow: 2px 2px 4px #000000;
-
 }
 .nombreEmpresa, .menuNavegacion{
     position: sticky;
@@ -90,7 +90,7 @@ a:hover{
     .menu_horizontal{
         list-style-type: none;
         display: flex;
-        border-radius: 30px;
+        border-radius: var(--BordeRadius-Menu);
         background-color: #6c6c6c;
         width: fit-content;
         /* margin-top: 10px; */
@@ -99,11 +99,13 @@ a:hover{
         padding: 8px;
         font-size: 1.2em;
         list-style: none;
+        width: max-content;
     }
     .menu_horizontal li:hover{
         background-color: #eebd3a;
-        border-radius: 50px;
+        border-radius: var(--BordeRadius-Menu);
         cursor:pointer;
+        transition: 0.5s;
     }
     .menu_vertical{
         display: none;
@@ -114,9 +116,9 @@ a:hover{
         z-index: 100;
         list-style-type: none;
         text-decoration: none;
-        width: 200px;
+        width: max-content;
         background-color: #929292;
-        border-radius: 20px;
+        border-radius: var(--BordeRadius-Menu);
     }
     .menu_vertical li{
         font-size: 0.8em;
@@ -126,22 +128,15 @@ a:hover{
         color: white;
     }
         .menu_vertical li:hover{
-            border-radius: 20px;
+            border-radius: var(--BordeRadius-Menu);
             background-color: #eebd3a;
             width:300;
+            transition: 0.5s;
         }
     .menu_horizontal li:hover .menu_vertical{
         display: block;
         text-align: center;
     }
-.miniMenu{
-    float: right;
-    /* Se queda fijo aunque hagamos scroll */
-    position: fixed;
-    right: 1px;
-    /* se pone por encima de cualquier caja que pase */
-    z-index: 100;
-}
     .miniMenu img:hover{
         transform: scale(1.3);
 
