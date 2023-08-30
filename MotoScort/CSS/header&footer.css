@@ -87,7 +87,7 @@ a:hover{
     height: fit-content;
     top: 10px;
 }
-    .menu_horizontal{
+    .nav_1stLine{
         list-style-type: none;
         display: flex;
         border-radius: var(--BordeRadius-Menu);
@@ -95,24 +95,24 @@ a:hover{
         width: fit-content;
         /* margin-top: 10px; */
     }
-    .menu_horizontal li{
+    .nav_1stLine li{
         padding: 8px;
         font-size: 1.2em;
         list-style: none;
         width: max-content;
     }
-    .menu_horizontal li:hover{
+    .nav_1stLine li:hover{
         background-color: #eebd3a;
         border-radius: var(--BordeRadius-Menu);
         cursor:pointer;
         transition: 0.5s;
     }
-    .subMenu{
+    .nav_2ndLine{
         display: none;
-        /* hace que el color del menu principal no se extienda al submenu */
+        /* hace que el color del menu principal no se extienda al nav_2ndLine */
         position: absolute;
         top: 42px;
-        /* hace que las foto no tapen el submenu al desplegarse */
+        /* hace que las foto no tapen el nav_2ndLine al desplegarse */
         z-index: 100;
         list-style-type: none;
         text-decoration: none;
@@ -120,20 +120,20 @@ a:hover{
         background-color: #929292;
         border-radius: var(--BordeRadius-Menu);
     }
-    .subMenu li{
+    .nav_2ndLine li{
         font-size: 0.8em;
     }
-    .subMenu li a{
+    .nav_2ndLine li a{
         text-decoration: none;
         color: white;
     }
-        .subMenu li:hover{
+        .nav_2ndLine li:hover{
             border-radius: var(--BordeRadius-Menu);
             background-color: #eebd3a;
             width:300;
             transition: 0.5s;
         }
-    .menu_horizontal li:hover .subMenu{
+    .nav_1stLine li:hover .nav_2ndLine{
         display: block;
         text-align: center;
     }

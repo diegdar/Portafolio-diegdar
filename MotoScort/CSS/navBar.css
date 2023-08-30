@@ -3,6 +3,10 @@
     padding: 0;
     box-sizing: border-box;
     outline: none;
+}
+:root{
+    --BorderRadius: 5px;
+    --Transition-Sliding: 1.5s;
 }   
 body{
     background-color: none;
@@ -14,11 +18,11 @@ body{
 .header{
     display: flex;
     background-color: #6c6c6c;
+    border-radius: var(--BorderRadius);
     height: 60px;
     position: fixed;
     width: 100%;
-    top: 0;
-    left: 0;
+    top: 0px;
 }
 .logo_container{
     display: flex;
@@ -26,6 +30,7 @@ body{
     color: #e9be44;
     margin-left: 90px;
 }
+/* Logo y nombre empresa....... */
 .logo_container h2{
     line-height: 60px;
 }
@@ -33,6 +38,7 @@ body{
         width: 100%;
         z-index: 100;
     }
+/* Menu Navegacion------------> */
 .nav{
     display: flex;
     justify-content: space-between;
@@ -65,12 +71,12 @@ body{
 }
 .nav_menu_link{
     padding: 8px 12px;
-    border-radius: 5px;
+    border-radius: var(--BorderRadius);
 }
     .nav_menu_link:hover{
         background-color: #eebd3a;
-        /* hace que el color aparezaca suavemente */
-        transition: 0.5s;
+        /* hace que el color aparezca suavemente */
+        transition: var(--Transition-Sliding);
     }
 /* icono hamburguesa */
 .nav_toggle{
@@ -85,37 +91,40 @@ body{
     /* estara oculto cuando este en dispositivos de escritorio */
     display: none;
 }
-/* MENU ICONOS------------------------ */
-.subMenu{
+/* Menu Navegacion 2da Linea------------------------ */
+.nav_2ndLine{
     display: none;
-    /* hace que el color del menu principal no se extienda al submenu */
-    position: absolute;
-    top: 42px;
-    /* hace que las foto no tapen el submenu al desplegarse */
+    /* hace que la posicion de la 2da linea del menu este justo por debajo dela 1ra linea */
+        position: absolute;
+        top: 52px;
+    /* hace que las foto no tapen el nav_2ndLine al desplegarse */
     z-index: 100;
     list-style-type: none;
     text-decoration: none;
     width: max-content;
+    padding: 0px 20px;
     background-color: #929292;
-    border-radius: var(--BordeRadius-Menu);
+    border-radius: var(--BorderRadius);
 }
-.subMenu li{
+.nav_2ndLine li{
     font-size: 0.8em;
 }
-.subMenu li a{
+.nav_2ndLine li a{
     text-decoration: none;
     color: white;
 }
-    .subMenu li:hover{
-        border-radius: var(--BordeRadius-Menu);
+    /* .nav_2ndLine li:hover{
+        border-radius: var(--BorderRadius);
         background-color: #eebd3a;
         width:300;
-        transition: 0.5s;
-    }
-/* .menu_horizontal li:hover .subMenu{
+        transition: var(--Transition-Sliding);
+    } */
+.nav_menu li:hover .nav_2ndLine{
     display: block;
+    
     text-align: center;
-} */
+    /* transition: var(--Transition-Sliding); */
+}
 .iconsMenu{
     /* float: right; */
     /* Se queda fijo aunque hagamos scroll */
@@ -152,22 +161,22 @@ body{
         margin-right: 0px;
         list-style: none;
         background-color: #0769e9;
+        border-radius: var(--BorderRadius);
         position: fixed;
-        left: 0;
         top: 60px;
         width: 100%;
         padding: 5px 0;
         /* oculta el menu hacia la izquierda */
             left: 100%;
             /* hace que el ocultamiento sea mas suave */
-            transition: left 1s;
+            transition: left var(--Transition-Sliding);
         /* permite hacer scroll cuando la pantalla es mas pequeña que el menu */
-            height: calc(42% - 60px);
-            overflow-y: auto;
+            /* height: calc(42% - 60px); */
+            /* overflow-y: auto; */
     }
     .nav_menu_item{
         font-size: 18px;
-        margin: 0 10px;
+        margin: 0 5px;
         /* centra verticalmente */
         line-height: 40px;
         /* cambia el texto a mayusculas */
@@ -176,9 +185,9 @@ body{
         width: max-content;
     }
         .nav_menu_link:hover{
-            background-color: #eebd3a;
-            /* hace que el color aparezaca suavemente */
-            transition: 0.5s;
+            /* background-color: #eebd3a; */
+            /* hace que el color aparezca suavemente */
+            /* transition: var(--Transition-Sliding); */
         }
     /* icono hamburguesa */
     .nav_toggle{
@@ -188,6 +197,22 @@ body{
     .nav_menu_visible{
         left: 0;
     }
+    /* Menu Navegacion 2da Linea------------------------ */
+    .nav_2ndLine{
+        /* hace que el color del menu principal no se extienda al nav_2ndLine */
+        position: relative;
+        /* left: 475px; */
+        top: 3px;
+        /* hace que las foto no tapen el nav_2ndLine al desplegarse */
+        z-index: 100;
+        list-style-type: none;
+        text-decoration: none;
+        /* width: max-content; */
+        padding: 0px 20px;
+        background-color: #6c6c6c;
+        border-radius: var(--BorderRadius);
+    }
+
     /* le da un resaltado al elemento que se ha seleccionado con el TAB */
     .nav_toggle:focus:not(:focus-visible){
         outline: none;
