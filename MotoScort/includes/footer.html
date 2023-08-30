@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Conexion con CSS --------->
-    <link rel="stylesheet" href="../CSS/header&footer.css">
+    <link rel="stylesheet" href="/MotoScort/CSS/footer.css">
     <!-- Conexion con JavaScript ------>
-    <script type="text/javaScript" src="../JavaScript/General.js"></script>
+    <script defer type="text/javaScript" src="/MotoScort/JavaScript/footer.js"></script>
 
     <title>Document</title>
 </head>
@@ -17,36 +17,36 @@
             <h3>Encuentranos en:</h3>
             <section>
                 <a href="https://www.instagram.com/">
-                    <img src="../assets/iconInstagram.svg" alt="icono enlace a nuestro instagram">
+                    <img src="/MotoScort/assets/iconInstagram.svg" alt="icono enlace a nuestro instagram">
                     <p>Instagram</p>
                 </a>
             </section>
             <section>
                 <a href="https://www.facebook.com/">
-                    <img src="../assets/iconFacebook.svg" alt="icono enlace a nuestro facebook">
+                    <img src="/MotoScort/assets/iconFacebook.svg" alt="icono enlace a nuestro facebook">
                     <p>Facebook</p>
                 </a>
             </section>
             <section>
                 <a href="https://www.youtube.com/">
-                    <img src="../assets/iconYoutube.svg" alt="icono enlace a nuestro youtube">
+                    <img src="/MotoScort/assets/iconYoutube.svg" alt="icono enlace a nuestro youtube">
                     <p>Youtube</p>
                 </a>
             </section>
         </div>
         <div id="politica_Privacidad">
             <h3>Terminos y condiciones</h3>
-            <a href="../terminosCondiciones.html#politicaPrivacidad">Politica de privacidad</a>
-            <a href="../terminosCondiciones.html#politicaCookies">Política sobre cookies</a>
+            <a href="/MotoScort/terminosCondiciones.html#politicaPrivacidad">Politica de privacidad</a>
+            <a href="/MotoScort/terminosCondiciones.html#politicaCookies">Política sobre cookies</a>
             <section id="disenador">Diseñado por Diego Chacon: 
                 <article>
-                    <a href="https://github.com/diegdar"><img src="../assets/iconGithub.svg"
+                    <a href="https://github.com/diegdar"><img src="/MotoScort/assets/iconGithub.svg"
                             alt="icono enlace a github desarrollador web">
                         <p>Github</p>
                     </a>
                 </article>
                 <article>
-                    <a href="https://diegdar.github.io/Portafolio-diegdar/"><img src="../assets/iconWebsite.svg" alt="icono sitio web desarrollador web">
+                    <a href="https://diegdar.github.io/Portafolio-diegdar/"><img src="/MotoScort/assets/iconWebsite.svg" alt="icono sitio web desarrollador web">
                     <p>Website</p>
                 </a>
                 </article>
@@ -54,22 +54,26 @@
         </div>
         <div id="enlacesUtiles">
             <h3>Enlaces Útiles:</h3>
-            <a href="../contacto.html">Ponte en contacto con nosotros</a>
-            <a href="../citaProbarMoto.html">Ven a probar tu moto</a>
-            <a href="../contacto.html#mapLocation">Donde Estamos</a>
+            <a href="/MotoScort/contacto.html">Ponte en contacto con nosotros</a>
+            <a href="/MotoScort/citaProbarMoto.html">Ven a probar tu moto</a>
+            <a href="/MotoScort/contacto.html#mapLocation">Donde Estamos</a>
         </div>
     </footer>
 </body>
-<!-- Si el link contiene "../" es porque esta en una carpeta local por lo que el target tomara el valor "_parent" y hara que el  <iframe> no se desaparezca al hacer click al link y que lo abra en la ventana de la pagina padre que lo contiene. En los demas casos abrira una nueva pestaña para el link y se permanecera abierta la pagina que contiene el link-->
+<!-- Este script solo funciona si esta dentro del html: **nota -->
 <script>
-    links = document.getElementsByTagName('a');
-    longArray = links.length;
-    for (var i = 0; i < longArray; i++) {
-        if (links[i].getAttribute("href").includes("../")) {
+let links = document.getElementsByTagName('a');
+let longArray = links.length;
+for (let i = 0; i < longArray; i++) {
+    if (links[i].getAttribute("href").includes("MotoScort")) {
+        // Impide que los links se abran en el iframe
         links[i].setAttribute("target", "_parent");
-        }else{
+    }else{
+        // hace que los links que son propios de la pagina abran en una pestaña
         links[i].setAttribute("target", "_blank"); 
-        }
     }
+}
+// **nota: Este script no funciona si está en un archivo JavaScript separado y se enlaza al HTML porque el script necesita acceder al objeto  document  para obtener los elementos  <a>  y modificar sus atributos. Al estar en un archivo externo, el script no tiene acceso directo al objeto  document  y no puede realizar las modificaciones necesarias en los enlaces. Para que el script funcione correctamente, debe estar dentro del HTML o debe haber una forma de comunicación entre el archivo JavaScript y el HTML para acceder a los elementos del documento.
+
 </script>
 </html>
