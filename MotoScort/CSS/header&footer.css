@@ -107,7 +107,7 @@ a:hover{
         cursor:pointer;
         transition: 0.5s;
     }
-    .menu_vertical{
+    .subMenu{
         display: none;
         /* hace que el color del menu principal no se extienda al submenu */
         position: absolute;
@@ -120,24 +120,24 @@ a:hover{
         background-color: #929292;
         border-radius: var(--BordeRadius-Menu);
     }
-    .menu_vertical li{
+    .subMenu li{
         font-size: 0.8em;
     }
-    .menu_vertical li a{
+    .subMenu li a{
         text-decoration: none;
         color: white;
     }
-        .menu_vertical li:hover{
+        .subMenu li:hover{
             border-radius: var(--BordeRadius-Menu);
             background-color: #eebd3a;
             width:300;
             transition: 0.5s;
         }
-    .menu_horizontal li:hover .menu_vertical{
+    .menu_horizontal li:hover .subMenu{
         display: block;
         text-align: center;
     }
-    .miniMenu img:hover{
+    .iconsMenu img:hover{
         transform: scale(1.3);
 
     }

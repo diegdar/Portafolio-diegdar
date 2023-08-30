@@ -116,7 +116,7 @@ body{
     display: block;
     text-align: center;
 } */
-.miniMenu{
+.iconsMenu{
     /* float: right; */
     /* Se queda fijo aunque hagamos scroll */
     /* position: fixed; */
@@ -124,7 +124,7 @@ body{
     /* se pone por encima de cualquier caja que pase */
     z-index: 100;
 }
-.miniMenu img:hover{
+.iconsMenu img:hover{
     transform: scale(1.3);
 
 }
