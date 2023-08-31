@@ -75,6 +75,21 @@
             </ul>
         </nav>
     </header>
-
+    <script>
+        let links = document.getElementsByTagName('a');
+        let longArray = links.length;
+        for (let i = 0; i < longArray; i++) {
+            if (links[i].getAttribute("href").includes("MotoScort")) {
+                // Impide que los links se abran en el iframe
+                links[i].setAttribute("target", "_parent");
+            }else{
+                // hace que los links que son propios de la pagina abran en una pestaña
+                links[i].setAttribute("target", "_blank"); 
+            }
+        }
+        // **nota: Este script no funciona si está en un archivo JavaScript separado y se enlaza al HTML porque el script necesita acceder al objeto  document  para obtener los elementos  <a>  y modificar sus atributos. Al estar en un archivo externo, el script no tiene acceso directo al objeto  document  y no puede realizar las modificaciones necesarias en los enlaces. Para que el script funcione correctamente, debe estar dentro del HTML o debe haber una forma de comunicación entre el archivo JavaScript y el HTML para acceder a los elementos del documento.
+        
+        </script>
+        
 </body>
 </html>
