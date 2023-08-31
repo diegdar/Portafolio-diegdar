@@ -81,7 +81,7 @@ body{
     border-radius: var(--BorderRadius);
 }
     .nav_menu_link:hover{
-        background-color: #eebd3a;
+        background-color: #ff282f;
         /* hace que el color aparezca suavemente */
         transition: var(--Transition-Sliding);
     }
@@ -157,7 +157,7 @@ body{
         list-style: none;
         background-color: #0769e9;
         border-radius: var(--BorderRadius);
-        position: fixed;
+        position: sticky;
         top: 60px;
         width: 100%;
         padding: 5px 0;
