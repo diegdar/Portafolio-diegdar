@@ -21,7 +21,7 @@ body{
     background-color: #6c6c6c;
     border-radius: var(--BorderRadius);
     height: 60px;
-    position: fixed;
+    position: sticky;
     width: 100%;
     top: 0px;
 }
@@ -97,6 +97,7 @@ body{
     cursor: pointer;
     /* estara oculto cuando este en dispositivos de escritorio */
     display: none;
+    width: 100%;
 }
 /* Menu Navegacion 2da Linea------------------------ */
 .nav_2ndLine{
@@ -134,7 +135,7 @@ body{
 }
 
 /* MEDIA QUERY MOVIL 400PX-------------------------- */
-@media (max-width: 400px){
+@media screen and (max-width: 380px) and (orientation: landscape) {
     body{
         padding-top: 70px;
     }    
