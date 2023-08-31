@@ -58,3 +58,7 @@ footer iframe{
     width: 100%;
     height: 135%;
 }
+/* MEDIA QUERY MOVIL 400PX-------------------------- */
+@media screen and (max-width: 480px) and (orientation: landscape) {
+    
+}

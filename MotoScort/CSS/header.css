@@ -29,7 +29,7 @@ body{
     display: flex;
     font-size: 2em;
     color: #e9be44;
-    margin-left: 60px;
+    margin-left: 10px;
 }
 /* Logo y nombre empresa....... */
 .logo_container h2{
@@ -81,7 +81,7 @@ body{
     border-radius: var(--BorderRadius);
 }
     .nav_menu_link:hover{
-        background-color: #ff282f;
+        background-color: rgb(195, 31, 36, 0.3);
         /* hace que el color aparezca suavemente */
         transition: var(--Transition-Sliding);
     }
@@ -133,7 +133,7 @@ body{
 
 }
 
-/* MEDIA QUERY-------------------------- */
+/* MEDIA QUERY MOVIL 400PX-------------------------- */
 @media (max-width: 400px){
     body{
         padding-top: 70px;
@@ -157,7 +157,7 @@ body{
         list-style: none;
         background-color: #0769e9;
         border-radius: var(--BorderRadius);
-        position: sticky;
+        position: fixed;
         top: 60px;
         width: 100%;
         padding: 5px 0;
