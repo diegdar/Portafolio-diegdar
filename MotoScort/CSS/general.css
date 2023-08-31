@@ -12,6 +12,7 @@ body{
     background-color: black;
     color: white;
     font-size: 1em;
+    margin-left: 5px;
     /* fuentes Google Fonts */
     font-family: 'Lumanosimo', cursive;
 }
@@ -59,8 +60,8 @@ footer iframe{
     height: 135%;
 }
 /* MEDIA QUERY MOVIL 400PX-------------------------- */
-@media screen and (max-width: 480px) and (orientation: landscape) {
-    .main{
-        width: 70%;
+@media screen and (max-width: 722px) {
+    h1{
+        font-size: 2.5em;
     }
 }

@@ -55,7 +55,6 @@ a:hover{
 /* FOOTER----------------------------- */
 footer{
     display: flex;
-
     border-top: 1px white dashed;
     background-color: black;
     /* padding-top: 8px; */
@@ -98,4 +97,10 @@ footer{
     flex-direction: column;
     text-align: center;
     justify-content: space-between;
+}
+/* MEDIAQUERY MOVIL-------------------------- */
+@media screen and (max-width: 722px) {
+    footer{
+        flex-wrap: wrap
+    }
 }

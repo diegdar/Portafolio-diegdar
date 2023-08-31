@@ -104,3 +104,11 @@
     box-shadow: 0px 0px 10px white;
     padding: 10px;
 }
+@media screen and (max-width: 722px) {
+    .galeriaImagenes, #reclamos, #precioMotos, #cajaPromociones{
+        flex-wrap: wrap
+    }    
+    .galeriaImagenes img{
+        width: 98%;
+    }
+}
