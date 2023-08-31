@@ -29,7 +29,7 @@ body{
     display: flex;
     font-size: 2em;
     color: #e9be44;
-    margin-left: 90px;
+    margin-left: 60px;
 }
 /* Logo y nombre empresa....... */
 .logo_container h2{
@@ -121,24 +121,11 @@ body{
     text-decoration: none;
     color: white;
 }
-    /* .nav_2ndLine li:hover{
-        border-radius: var(--BorderRadius);
-        background-color: #eebd3a;
-        width:300;
-        transition: var(--Transition-Sliding);
-    } */
 .nav_menu li:hover .nav_2ndLine{
     display: block;
-    
     text-align: center;
-    /* transition: var(--Transition-Sliding); */
 }
 .iconsMenu{
-    /* float: right; */
-    /* Se queda fijo aunque hagamos scroll */
-    /* position: fixed; */
-    /* left: 1px; */
-    /* se pone por encima de cualquier caja que pase */
     z-index: 100;
 }
 .iconsMenu img:hover{
@@ -147,7 +134,7 @@ body{
 }
 
 /* MEDIA QUERY-------------------------- */
-@media (max-width: 768px){
+@media (max-width: 400px){
     body{
         padding-top: 70px;
     }    
@@ -204,13 +191,12 @@ body{
     .nav_2ndLine{
         /* hace que el color del menu principal no se extienda al nav_2ndLine */
         position: relative;
-        /* left: 475px; */
         top: 3px;
-        /* hace que las foto no tapen el nav_2ndLine al desplegarse */
+        /* hace que las fotos no tapen el nav_2ndLine al desplegarse */
         z-index: 100;
         list-style-type: none;
         text-decoration: none;
-        /* width: max-content; */
+        width: max-content;
         padding: 0px 20px;
         background-color: var(--Background_Color-2ndLine);
         border-radius: var(--BorderRadius);
