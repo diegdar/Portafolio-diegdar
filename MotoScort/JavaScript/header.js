@@ -13,7 +13,6 @@ navToggle.addEventListener("click", () =>{
 })
 
 //🆕 Mantiene el color del ultimo link clequeado 
-
 const menuLinks = document.querySelectorAll('.nav_menu a');
 
 menuLinks.forEach(link => {

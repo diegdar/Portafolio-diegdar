@@ -78,7 +78,7 @@
         let links = document.getElementsByTagName('a');
         let longArray = links.length;
         for (let i = 0; i < longArray; i++) {
-            if (links[i].getAttribute("href").includes("MotoScort")) {
+            if (links[i].getAttribute("href").includes("../")) {
                 // Impide que los links se abran en el iframe
                 links[i].setAttribute("target", "_parent");
             }else{
