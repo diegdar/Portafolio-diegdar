@@ -47,6 +47,12 @@ body{
         max-width: 992px;
         margin: 0 auto;
 }
+/* Hace que un elemento del menú de navegación mantenga un color a modo de foco cuando se hace clic en él, hasta que se cambia a otro. */
+.itemActive{
+    background-color: #eebd3a;
+    width: max-content;
+
+}
 .nav_link{
     color: white;
     text-decoration: none;
@@ -79,12 +85,6 @@ body{
         /* hace que el color aparezca suavemente */
         transition: var(--Transition-Sliding);
     }
-/* Hace que un elemento del menú de navegación mantenga un color a modo de foco cuando se hace clic en él, hasta que se cambia a otro. */
-/* 31.08> 12:06 */
-.itemActive{
-    background-color: #eebd3a;
-    
-}
 /* icono hamburguesa */
 .nav_toggle{
     color: #229bff;
