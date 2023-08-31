@@ -80,9 +80,10 @@ body{
         transition: var(--Transition-Sliding);
     }
 /* Hace que un elemento del menú de navegación mantenga un color a modo de foco cuando se hace clic en él, hasta que se cambia a otro. */
+/* 31.08> 12:06 */
 .itemActive{
     background-color: #eebd3a;
-
+    
 }
 /* icono hamburguesa */
 .nav_toggle{
@@ -191,11 +192,6 @@ body{
         /* hace que cuando la pantalla sea mas pequeña no se oculte parte del texto en el elemento <li>*/
         width: max-content;
     }
-        .nav_menu_link:hover{
-            /* background-color: #eebd3a; */
-            /* hace que el color aparezca suavemente */
-            /* transition: var(--Transition-Sliding); */
-        }
     /* icono hamburguesa */
     .nav_toggle{
         display: block;
