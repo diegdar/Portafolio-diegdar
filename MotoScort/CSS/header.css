@@ -29,7 +29,7 @@ body{
     display: flex;
     font-size: 1.8em;
     color: #e9be44;
-    margin-left: 10px;
+    margin-left: 60px;
 }
 /* Logo y nombre empresa....... */
 .logo_container h2{
@@ -140,13 +140,19 @@ body{
         height: 60px;
     }
     .logo{
-        font-size: 25px;
+        font-size: 20px;
         padding: 0 20px;
         line-height: 60px;
     }
-    .logo_container img{
-        width: 15%;
+    .logo_container{
+        margin-left: 0px;
     }
+        .logo_container h2{
+            font-size: 1.3em;
+        }
+        .logo_container img{
+            width: 15%;
+        }
     .nav_menu{
         display: flex;
         flex-direction: column;
