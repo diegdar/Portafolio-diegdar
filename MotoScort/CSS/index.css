@@ -36,15 +36,17 @@
 #reclamos {
     display: flex;
     justify-content: center;
-    align-items: center;
+    /* align-items: center; */
     border-top: 4px solid white;
     border-bottom: 4px solid white;
-  }
+}
     #reclamos section{
         flex:1;
         text-align: center;
+        /* align-self: center; */
         background-color: #c31f24;
-        height: 230px;
+        /* height: fit-content; */
+        /* height: 290px; */
     }
     #reclamos section:nth-child(2){
         border-left: 1px white dashed;

@@ -27,7 +27,7 @@ body{
 }
 .logo_container{
     display: flex;
-    font-size: 2em;
+    font-size: 1.8em;
     color: #e9be44;
     margin-left: 10px;
 }
@@ -134,11 +134,8 @@ body{
 
 }
 
-/* MEDIA QUERY MOVIL 400PX-------------------------- */
-@media screen and (max-width: 380px) and (orientation: landscape) {
-    body{
-        padding-top: 70px;
-    }    
+/* MEDIA QUERY MOVIL-------------------------- */
+@media screen and (max-width: 700px) {
     .header{
         height: 60px;
     }
