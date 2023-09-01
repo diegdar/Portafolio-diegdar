@@ -11,12 +11,8 @@ h1{
         border-left: white 2px solid;
         padding-left: 20px;
         margin-top: 10px;
-
+        
     }
-    /* .main section{
-        z-index: 200;
-    } */
-    
     aside img{
         width: 40px;
     }
@@ -28,6 +24,11 @@ h1{
     }
 h2{
     text-align: center;
+}
+/* google maps */
+iframe{
+    width: 600px;
+    height: 400px;
 }
 form{
     align-items: center;

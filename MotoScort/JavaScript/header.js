@@ -27,6 +27,7 @@ for (var i = 0; i < long; i++) {
     menuItem.classList.add('itemActive'); /* Cambia el color al elemento actual */
   }
 }
+
 //🆕 Mantiene el color del ultimo link cliqueado en la segundalinea del menu(subMenu) de navegacion
 const links2ndLine = document.querySelectorAll('.nav_2ndLine a');
 
