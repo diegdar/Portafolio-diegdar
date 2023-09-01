@@ -5,9 +5,11 @@
     outline: none;
 }
 :root{
-    --BorderRadius: 5px;
-    --Transition-Sliding: 1.5s;
-    --Background_Color-2ndLine: rgb(108, 108, 108, 0.8);
+    --Nav-BorderRadius: 5px;
+    --Nav-Transition-Sliding: 1.5s;
+    --Nav-Background_Color-2ndLine: rgb(108, 108, 108, 0.8);
+    --Nav-Font_Color: white;
+    --Nav-Font_Shadow: 2px 2px 4px black;
 }   
 body{
     background-color: none;
@@ -19,7 +21,7 @@ body{
 .header{
     display: flex;
     background-color: #6c6c6c;
-    border-radius: var(--BorderRadius);
+    border-radius: var(--Nav-BorderRadius);
     height: 60px;
     position: sticky;
     width: 100%;
@@ -29,7 +31,7 @@ body{
     display: flex;
     font-size: 1.8em;
     color: #e9be44;
-    margin-left: 60px;
+    margin-left: 30px;
 }
 /* Logo y nombre empresa....... */
 .logo_container h2{
@@ -54,7 +56,8 @@ body{
 
 }
 .nav_link{
-    color: white;
+    color: var(--Nav-Font_Color);
+    text-shadow: var(--Nav-Font_Shadow);
     text-decoration: none;
 }
 .logo{
@@ -78,12 +81,12 @@ body{
 }
 .nav_menu_link{
     padding: 8px 12px;
-    border-radius: var(--BorderRadius);
+    border-radius: var(--Nav-BorderRadius);
 }
     .nav_menu_link:hover{
         background-color: rgb(195, 31, 36, 0.3);
         /* hace que el color aparezca suavemente */
-        transition: var(--Transition-Sliding);
+        transition: var(--Nav-Transition-Sliding);
     }
 /* icono hamburguesa */
 .nav_toggle{
@@ -111,19 +114,19 @@ body{
     text-decoration: none;
     width: max-content;
     padding: 0px 20px;
-    background-color: var(--Background_Color-2ndLine);
-    
-    border-radius: var(--BorderRadius);
+    background-color: var(--Nav-Background_Color-2ndLine);
+    border-radius: var(--Nav-BorderRadius);
 }
 .nav_2ndLine li{
     font-size: 0.8em;
 }
 .nav_2ndLine li a{
     text-decoration: none;
-    color: white;
+    color: var(--Nav-Font_Color);
+    text-shadow: var(--Nav-Font_Shadow);
 }
 .nav_menu li:hover .nav_2ndLine{
-    display: block;
+    display: flex;
     text-align: center;
 }
 .iconsMenu{
@@ -160,7 +163,7 @@ body{
         margin-right: 0px;
         list-style: none;
         background-color: #0769e9;
-        border-radius: var(--BorderRadius);
+        border-radius: var(--Nav-BorderRadius);
         position: fixed;
         top: 60px;
         width: 100%;
@@ -168,7 +171,7 @@ body{
         /* oculta el menu hacia la izquierda */
             left: 100%;
             /* hace que el ocultamiento sea mas suave */
-            transition: left var(--Transition-Sliding);
+            transition: left var(--Nav-Transition-Sliding);
         /* permite hacer scroll cuando la pantalla es mas pequeña que el menu */
             /* height: calc(100% - 60px); */
             /* overflow-y: auto; */
@@ -195,15 +198,15 @@ body{
     .nav_2ndLine{
         /* hace que el color del menu principal no se extienda al nav_2ndLine */
         position: relative;
-        top: 3px;
+        top: 0;
         /* hace que las fotos no tapen el nav_2ndLine al desplegarse */
         z-index: 100;
         list-style-type: none;
         text-decoration: none;
         width: max-content;
         padding: 0px 20px;
-        background-color: var(--Background_Color-2ndLine);
-        border-radius: var(--BorderRadius);
+        background-color: var(--Nav-Background_Color-2ndLine);
+        border-radius: var(--Nav-BorderRadius);
     }
 
     /* le da un resaltado al elemento que se ha seleccionado con el TAB */
