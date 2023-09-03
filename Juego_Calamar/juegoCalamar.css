@@ -1,0 +1,59 @@
+body{
+    background-color: black;
+    color: white;
+}
+div{
+    display: flex;
+    justify-content: center;
+}
+#caja{
+    border: 3px solid #0600fb;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    text-align: center;
+    width: 70%;
+    
+}
+h4{
+    color: white;
+}
+h4, .colorFondo article{
+    padding: 0px;
+    margin: 0px;
+}
+.botones{
+    background-color: #720671;
+    border-radius: 10px;
+    color: yellow;
+    padding: 5px;
+    margin: 5px;
+    
+}
+#botonesInfo{
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+}
+.colorFondo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 150px;
+}
+#estiloOscuro{
+    background-color: black;
+}
+#estiloNormal{
+    background-color: white;
+}
+.botonesEstiloFondo{
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    margin: 5px;
+}
+div img {
+    width: 70%;
+    height: 400px;
+}

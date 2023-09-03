@@ -1,15 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Conexion con CSS --------->
-    <!-- <link rel="stylesheet" href="/CSS/general.css"> -->
-    <link rel="stylesheet" href="/CSS/header&footer.css">
-
-    <!-- Conexion con JavaScript ------>
-    <script type="text/javaScript" src="/JavaScript/General.js"></script>
-
+    <link rel="stylesheet" href="../CSS/footer.css">
     <title>Document</title>
 </head>
 <body>
@@ -18,30 +13,65 @@
         <div id="redesSociales">
             <h3>Encuentranos en:</h3>
             <section>
-                <img src="/assets/iconInstagram.svg" alt="icono enlace a nuestro instagram">
-                <p>Instagram</p>
+                <a href="https://www.instagram.com/">
+                    <img src="../assets/iconInstagram.svg" alt="icono enlace a nuestro instagram">
+                    <!-- <img src="../assets/iconInstagram.svg" alt="icono enlace a nuestro instagram"> -->
+                    <p>Instagram</p>
+                </a>
             </section>
             <section>
-                <img src="/assets/iconFacebook.svg" alt="icono enlace a nuestro facebook">
-                <p>Facebook</p>
+                <a href="https://www.facebook.com/">
+                    <img src="../assets/iconFacebook.svg" alt="icono enlace a nuestro facebook">
+                    <p>Facebook</p>
+                </a>
             </section>
             <section>
-                <img src="/assets/iconYoutube.svg" alt="icono enlace a nuestro youtube">
-                <p>Youtube</p>
+                <a href="https://www.youtube.com/">
+                    <img src="../assets/iconYoutube.svg" alt="icono enlace a nuestro youtube">
+                    <p>Youtube</p>
+                </a>
             </section>
         </div>
         <div id="politica_Privacidad">
-            <a href="politicaWeb#privacidad.html">Politica de privacidad</a>
-            <a href="politicaWeb#cookies">Política sobre cookies</a>
-            <a href="politicaWeb#terminosCondiciones">Terminos y condiciones</a>
-            <p>Copyright 2023 © motoScort · Diseñado por Diego Chacon</p>
+            <h3>Terminos y condiciones</h3>
+            <a href="../terminosCondiciones.html#politicaPrivacidad">Politica de privacidad</a>
+            <a href="../terminosCondiciones.html#politicaCookies">Política sobre cookies</a>
+            <section id="disenador">Diseñado por Diego Chacon: 
+                <article>
+                    <a href="https://github.com/diegdar"><img src="../assets/iconGithub.svg"
+                            alt="icono enlace a github desarrollador web">
+                        <p>Github</p>
+                    </a>
+                </article>
+                <article>
+                    <a href="https://diegdar.github.io/Portafolio-diegdar/"><img src="../assets/iconWebsite.svg" alt="icono sitio web desarrollador web">
+                    <p>Website</p>
+                </a>
+                </article>
+            </section>
         </div>
         <div id="enlacesUtiles">
             <h3>Enlaces Útiles:</h3>
-            <a href="contactanos.html">Ponte en contacto con nosotros</a>
-            <a href="formularioProbarMoto.html">Pedir probar una moto</a>
-            <a href="dondeEstamos.html">Concesionarios</a>
+            <a href="../contacto.html">Ponte en contacto con nosotros</a>
+            <a href="../citaProbarMoto.html">Ven a probar tu moto</a>
+            <a href="../contacto.html#mapLocation">Donde Estamos</a>
         </div>
     </footer>
 </body>
+<!-- Este script solo funciona si esta dentro del html: **nota -->
+<script>
+let links = document.getElementsByTagName('a');
+let longArray = links.length;
+for (let i = 0; i < longArray; i++) {
+    if (links[i].getAttribute("href").includes("../")) {
+        // Impide que los links se abran en el iframe
+        links[i].setAttribute("target", "_parent");
+    }else{
+        // hace que los links que son propios de la pagina abran en una pestaña
+        links[i].setAttribute("target", "_blank"); 
+    }
+}
+// **nota: Este script no funciona si está en un archivo JavaScript separado y se enlaza al HTML porque el script necesita acceder al objeto  document  para obtener los elementos  <a>  y modificar sus atributos. Al estar en un archivo externo, el script no tiene acceso directo al objeto  document  y no puede realizar las modificaciones necesarias en los enlaces. Para que el script funcione correctamente, debe estar dentro del HTML o debe haber una forma de comunicación entre el archivo JavaScript y el HTML para acceder a los elementos del documento.
+
+</script>
 </html>

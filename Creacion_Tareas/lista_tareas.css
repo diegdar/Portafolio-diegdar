@@ -1,0 +1,64 @@
+/* General--------------------- */
+/* reseteo navegador */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+body{
+    background-color: azure;
+}
+/* Header----------------- */
+header{
+    background-color: #098ba8;
+    padding: 5px;
+    margin: 5px;
+    position: sticky;
+    top: 0px;
+    border-bottom: 2px dashed red;
+}
+h1{
+    text-align: center;
+}
+.estiloBoton{
+    background: url('img/cross-296507_1280.png') no-repeat center;
+    background-size: contain;    
+    height: 16px;    
+    width: 16px;
+    border: none;
+    
+}
+.botones{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    position: sticky;    
+}
+/* Main----------------------------------------- */
+main{
+    display: flex;
+    justify-content: center;
+}
+.listaTareas{
+    background-color: #4fb0cd;
+    margin: 5px;
+    width: 640px;
+    margin: 10px;
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    
+}
+.tachado{
+    text-decoration: line-through; /* texto tachado */
+}
+#padre {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* justify-content: flex-start; */
+    font-size: 1.2em;
+    padding: 10px 30px;
+} 

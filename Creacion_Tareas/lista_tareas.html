@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio-Diegdar: Lista Tareas</title>
+  <link rel="stylesheet" href="lista_tareas.css">
+</head>
+
+<body>
+  <header>
+    <h1>LISTA DE TAREAS</h1>
+    <section class="botones">
+      <input type="text" id="cajaTexto" placeholder="Agregar nueva tarea">
+      <button onclick="agregarTarea()">Agregar</button>
+      <button onclick="borrarSeleccionados()">Borrar Seleccionadas</button>
+      <input type="checkbox" id="seleccionarTodas" onclick="seleccionarTodo()"><label
+        for="seleccionarTodas">Seleccionar/Quitar Seleccion de Todas</label>
+    </section>
+  </header>
+  <main>
+    <section class="listaTareas">
+      <ul id="padre">
+
+      </ul>
+    </section>
+  </main>
+  <script src="lista_tareas.js"></script>
+</body>
+
+</html>

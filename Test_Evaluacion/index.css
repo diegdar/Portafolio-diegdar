@@ -1,0 +1,44 @@
+body{
+    background-color: #63bf6a;
+    font-family: 'Ubuntu', sans-serif;
+}
+h1{
+    text-align: center;
+}
+h3{
+    -webkit-box-shadow: 18px 1px 24px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 18px 1px 24px 0px rgba(0,0,0,0.75);
+    box-shadow: 18px 1px 24px 0px rgba(0,0,0,0.75);
+    width: 100px;
+}
+#finTiempo{
+    text-align: center;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    position: sticky;
+    top: 5px;
+}
+#tabla{
+    display: flex;
+    justify-content: center;
+}
+tr, td{
+    border: 2px solid black;
+    text-align: center;
+}
+.cuentRegresiva{
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+    position: sticky;
+    top: 5px;
+    display: block;
+}
+.oculto {
+    display: none;
+}
+.visible{
+    display: block;
+}

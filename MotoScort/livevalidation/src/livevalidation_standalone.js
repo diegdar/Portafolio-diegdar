@@ -724,7 +724,7 @@ var Validate = {
     	var maximum = ((paramsObj.maximum) || (paramsObj.maximum == 0)) ? paramsObj.maximum : null;
     	var is = ((paramsObj.is) || (paramsObj.is == 0)) ? paramsObj.is : null;
         var wrongLengthMessage = paramsObj.wrongLengthMessage || "Ha de contenir exactament " + is + " caràcters!";
-    	var tooShortMessage = paramsObj.tooShortMessage || "Ha de contenir com a mínim " + minimum + " caràcters!";
+    	var tooShortMessage = paramsObj.tooShortMessage || "Debe haber como mínimo " + minimum + " caràcters!";
     	var tooLongMessage = paramsObj.tooLongMessage || "Debe contener como maximo " + maximum + " caràcters!";
     	switch(true){
     	  	case (is !== null):

@@ -1,0 +1,52 @@
+/* GRID----------------------------------------- */
+.container_Motos {  display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.8fr 1fr 0.7fr 0.7fr;
+    grid-auto-rows: 1fr;
+    gap: 50px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "img_moto1 text_moto1"
+      "text_moto2 img_moto2"
+      "img_moto3 text_moto3"
+      "text_moto4 img_moto4";
+    align-items: center;
+    /* line-height: inherit; */
+    justify-items: center;
+  }
+  .container_Motos{
+    text-align: center;
+    margin: 0 50px;
+  } 
+  .img_moto1 { grid-area: img_moto1; }
+  
+  .text_moto1 { grid-area: text_moto1; }
+  
+  .text_moto2 { grid-area: text_moto2; }
+  
+  .img_moto2 { grid-area: img_moto2; }
+  
+  .img_moto3 { grid-area: img_moto3; }
+  
+  .img_moto { grid-area: img_moto; }
+  
+  .img_moto4 { grid-area: img_moto4; }
+  
+  .text_moto4 { grid-area: text_moto4; }
+    
+/*GENERAL-------------------------------  */
+.container_Motos img{
+    /* width: 300px; */
+    display: flex;
+
+    border-radius: 10%;
+    /* margin: 10px; */
+    justify-self: center;
+    width: 100%;
+    min-width: 200px;
+    height: 150px;
+    max-width: 400px;
+    border: 2px solid yellow;
+    box-shadow: 0px 0px 10px rgb(255, 251, 251); 
+
+}

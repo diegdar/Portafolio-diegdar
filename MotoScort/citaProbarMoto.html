@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Conexion con CSS --------->
-        <link rel="stylesheet" href="/CSS/general.css">
-        <link rel="stylesheet" href="/CSS/formCitaMoto.css">
+        <link rel="stylesheet" href="CSS/general.css">
+        <link rel="stylesheet" href="CSS/citaMoto.css">
     <!-- Conexion con LiveValidtion-------- -->
-        <script type="text/javascript" src="/livevalidation/src/livevalidation_standalone.js"></script>
-        <link rel="stylesheet" href="/livevalidation/test/css/validation.css">
+        <script type="text/javascript" src="livevalidation/src/livevalidation_standalone.js"></script>
+        <link rel="stylesheet" href="livevalidation/test/css/validation.css">
     <!-- Conexion con JavaScript ------>
-    <script type="text/javaScript" src="/JavaScript/General.js"></script>
+    <script type="text/javaScript" src="JavaScript/General.js"></script>
     <!-- METADATOS------- -->
     <meta name="description" content="Tienda de venta de motos y accesorios">
     <!-- autor y copyright (OPCIONAL)-->
@@ -21,7 +21,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lumanosimo&display=swap" rel="stylesheet">
-        <link rel="import" href="/includes/header_footer.html">
+        <link rel="import" href="includes/header_footer.html">
 
     <!-- ANIMACION TEXTO NOMBRE EMPRESA----- -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
@@ -32,11 +32,12 @@
 <div class="container">
     <header class="header">    
         <!-- Importacion de la cabecera, barra de navegacion y miniMenu------ -->
-        <iframe src="/includes/header.html" frameborder="0" scrolling="no"></iframe>
+        <iframe src="includes/header.html" ></iframe>
     </header>
     <main class="main">
-        <h2>Pedir cita para probar una moto</h2>
-        <form action="#" id="form-input" method="get" action="#" onsubmit="return validarSexo()">
+        <form action="#" id="form_CitaMoto" method="get" action="#" onsubmit="return validarSexo()">
+            <h1>Cita para probar una moto</h1>
+            <p>Puedes agendar una cita para probar una de nuestras motos, solo debes rellenar el siguiente formulario y te confirmaremos la cita a tu email. </p>
             <fieldset>
                 <legend>Datos Personales:</legend>
                 <div>
@@ -48,12 +49,15 @@
                     </section>
                 </div>
                 <div class="sexos">
-                    Sexo:
+                    Genero:
                     <section class="radios">
-                        Hombre<input type="radio" id="hombre" name="sexo" value="hombre">
+                        Masculino<input type="radio" id="masculino" name="sexo" value="masculino">
                     </section>
                     <section class="radios">
-                        Mujer<input type="radio" id="mujer" name="sexo" value="mujer">
+                        Femenino<input type="radio" id="femenino" name="sexo" value="femenino">
+                    </section>
+                    <section class="radios">
+                        Otro<input type="radio" id="otro" name="sexo" value="otro">
                     </section>
                 </div>
                 <!-- !!⚠️Aunque es una validacion 'email' se debe poner el "type" como tipo 'text' para que funcione el LiveValidation-->
@@ -70,16 +74,18 @@
                 <legend>Peticion Cita:</legend>
                 <div>
                     <section>Poblacion:
-                        <select name="poblaciones" id="poblaciones">
+                        <select name="poblaciones" id="opcDesplegable">
                             <option value="0">Selecciona una opcion:</option>
                             <option value="1">Barcelona</option>
                             <option value="2">Valencia</option>
                             <option value="3">Madrid</option>
                         </select>
                     </section>
+                </div>
+                <div>
                     <section>
                         Fecha y hora preferida:
-                        <input type="datetime-local">
+                        <input type="datetime-local" id="fechaCita">
                     </section>
                 </div>
                 <div class="checkboxAceptar">
@@ -97,12 +103,12 @@
 
     <footer class="footer">    
         <!-- Importacion del Footer------ -->
-        <iframe src="/includes/footer.html" frameborder="0" scrolling="no"></iframe>
+        <iframe src="includes/footer.html" ></iframe>
     </footer>
     
 </div>
 <!--!!⚠️ Para que funcione el LiveValidation el link del JavaScript debe estar al final -->
-<script type="text/javascript" src="/JavaScript/formProbarMoto.js"></script>
+<script type="text/javascript" src="JavaScript/formularios.js"></script>
 
 </body>
 </html>
