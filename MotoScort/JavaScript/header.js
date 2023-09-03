@@ -13,40 +13,22 @@ navToggle.addEventListener("click", () =>{
 })
 
 //🆕 Mantiene el color del ultimo link cliqueado en la primera linea del menu de navegacion
-// Obtenemos el enlace de la página actual
+// Obtenemos el href de la página actual
 var currentPage = parent.window.location.href;
+// Obtenemos el href de la pagina padre (pagina actual sin el enlace de anclaje)
+var parentPage = parent.window.location.href.split('#')[0];
 
 // Obtenemos todos los elementos del menú
-var menuItems = document.getElementsByClassName("nav_menu");
+var menuItems = document.querySelectorAll(".nav_menu a");
 
 // Recorremos los elementos del menú y verificamos si el enlace coincide con la página actual
-for (var i = 0; i < menuItems.length; i++) {
-  var menuItem = menuItems[i].getElementsByTagName("a")[0];
-  
-  // Verificamos si el elemento <a> tiene el atributo href definido
-  if (menuItem && menuItem.hasAttribute("href")) {
-    var href = menuItem.getAttribute("href");
-
-    // Verificamos si el enlace contiene el símbolo de anclaje #
-    if (href.includes("#")) {
-      var parentPage = href.split("#")[0];
-
-      // Verificamos si la página padre coincide con la página actual
-      if (currentPage.includes(parentPage)) {
-        menuItem.classList.add("itemActive"); // Agregamos la clase 'itemActive' al elemento
-      }
-    }
+let long = menuItems.length;
+for (var i = 0; i < long; i++) {
+  // si el href del elemento del array coincide con la de la 'pagina padre', el padre tomara todos los valores del elemento  
+  if (menuItems[i].href===(parentPage)) {
+    parentPage = menuItems[i];
+  // Cuando haya un elemento que coincida con la pagina actual, el elemento que teniamos guardado como 'pagina padre' le asignamos la clase 'itemActive' para que tome el foco con el color amarillo
+  }if (menuItems[i].href.includes(currentPage)) {
+    parentPage.classList.add('itemActive'); /* Cambia el color al elemento actual */
   }
-}//🆕 Mantiene el color del ultimo link cliqueado en la segundalinea del menu(subMenu) de navegacion
-const links2ndLine = document.querySelectorAll('.nav_2ndLine a');
-
-links2ndLine.forEach(link => {
-    link.addEventListener('click', function() {
-      // Eliminar la clase 'itemActive' de todos los enlaces
-      links2ndLine.forEach(link => {
-        link.classList.remove('itemActive');
-      });
-      // Agregar la clase 'itemActive' solo al enlace clicado
-      this.classList.add('itemActive');
-    });
-  });
+}
