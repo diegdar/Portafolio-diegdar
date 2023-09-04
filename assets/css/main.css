@@ -1771,14 +1771,17 @@ input, select, textarea {
 		}
 
 		.image.avatar48 {
-			width: 48px;
-			height: 48px;
+			width: 220px;
+			/* height: 48px; */
 			background: #f00;
+			border-radius: 10px;
+
 		}
 
 			.image.avatar48 img {
-				width: 48px;
-				height: 48px;
+				width: 220px;
+				/* height: 48px; */
+				border-radius: 10px;
 			}
 
 		.image.fit {
@@ -2127,32 +2130,39 @@ input, select, textarea {
 		text-align: center;
 		justify-items: center;
 		position: relative;
-		margin: 1.75em 1.5em 1.5em 1.5em;
+		margin: 1em 1em 1.5em 1.5em;
 		min-height: 48px;
 		cursor: default;
+		height: 300px;
+		
 	}
 
 		#logo h1 {
-			position: relative;
+			position: absolute;
 			color: #fff;
+			top: 225px;
+			left: 0px;
 			font-weight: 600;
-			font-size: 1em;
+			font-size: 1.5em;
 			line-height: 1em;
 		}
 
 		#logo p {
-			position: relative;
+			position: absolute;
 			display: block;
-			font-size: 0.6em;
+			top: 280px;
+			font-size: 1em;
 			color: rgba(255, 255, 255, 0.5);
 			line-height: 1.25em;
 			margin: 0.5em 0 0 0;
 		}
 
 		#logo .image {
-			position: absolute;
+			position: relative;
 			left: 0;
 			top: 0;
+			border-color: white 2px solid;
+			box-shadow: 0px 0px 10px white;
 		}
 
 	#nav ul {
@@ -2486,8 +2496,8 @@ input, select, textarea {
 				#header .bottom {
 					border-top: solid 1px rgba(255, 255, 255, 0.05);
 					box-shadow: 0 -1px 0 0 rgba(0, 0, 0, 0.15);
-					padding-top: 2em;
-					margin-top: 2em;
+					padding-top: 1em;
+					margin-top: 1em;
 					position: relative;
 				}
 
