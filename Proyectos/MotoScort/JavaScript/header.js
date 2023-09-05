@@ -1,4 +1,4 @@
-//🆕 Hace que se desplazase el menu de navegacion al hacer click en el icono de hamburguesa
+//🆕 Hace que se muestre el menu de navegacion al hacer click en el icono de hamburguesa
 const navToggle = document.querySelector(".nav_toggle");
 const navMenu = document.querySelector(".nav_menu");
 
