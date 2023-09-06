@@ -11,7 +11,7 @@
     --AsideMenu-Background_Color-2ndLine: rgb(108, 108, 108, 0.8);
     --AsideMenu-Font_Color: white;
     --AsideMenu-Font_Shadow: 2px 2px 4px black;
-    --nav_menu-Items-Padding: 10px 10px;
+    --nav_menu-Items-Padding: 5px 5px;
 }   
 
 body{
@@ -48,27 +48,27 @@ body{
     justify-content: space-around;
     /* padding: 5px 20px; */
     & h1{
-        font-size: 2em;
+        font-size: 1.5em;
     }
     & h2{
-        font-size: 1.7em;
+        font-size: 1.5em;
     }
     & h3{
-        font-size: 1.5em;
+        font-size: 1.2em;
     }
     & #top{
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 1em;
-        padding: 0 15px;
+        margin-top: 0.5em;
+        padding: 0 1em;
         & figure{
             display: flex;
             flex-direction: column;
             align-items: center;
         }
         & img{
-            width: 200px;
+            width: 170px;
             border-radius: 10px;
             border-color: white 2px solid;
             box-shadow: 0px 0px 10px white;  
@@ -80,7 +80,7 @@ body{
         flex-direction: column;
         list-style: none;
         margin: 20px 0;
-        font-size: 1.2em;
+        font-size: 1em;
         & a{
             display: flex;
             align-items: center;
@@ -91,7 +91,6 @@ body{
             & img{
                 margin-left: 10px;
                 padding: var(--nav_menu-Items-Padding);
-
             }
         }
         & :hover{
