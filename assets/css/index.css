@@ -170,14 +170,14 @@ body{
     }
         .nav_menu_hide{
         /* oculta el menu hacia la izquierda */
-        right: 100%;
+        left: 100%;
         /* display: none; */
         /* hace que el ocultamiento sea mas suave */
         transition: 1.5s;
     }
         /* muestra el menu */
         .nav_menu_visible{
-            right: 0%;
+            left: 0%;
             /* display: block; */
         }
 /* Main *********************** */
