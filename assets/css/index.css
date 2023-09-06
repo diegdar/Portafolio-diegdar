@@ -43,6 +43,9 @@ body{
     color: var(--AsideMenu-Font_Color);
     position:fixed ;
     height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
     /* padding: 5px 20px; */
     & h1{
         font-size: 2em;
@@ -107,6 +110,10 @@ body{
         }
     }
 }
+#main{
+    margin: 1em;
+}
+
 /* MAIN *****************************/
 /* MEDIA QUERY MOVIL-------------------------- */
 @media screen and (max-width: 722px) {
@@ -170,11 +177,14 @@ body{
     }
         /* muestra el menu */
         .nav_menu_visible{
-            right: 54.9%;
+            right: 0%;
             /* display: block; */
         }
 /* Main *********************** */
     main{
         margin: 10px
+    }
+    & #bottom .icons{
+        margin-bottom: 10px;
     }
 }
