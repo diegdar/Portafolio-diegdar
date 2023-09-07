@@ -16,13 +16,19 @@
 
 body{
     /* fuentes Google Fonts */
-    font-family: 'Lumanosimo', cursive;
+    font-family: 'Caveat', cursive;
+    font-family: 'Ubuntu', sans-serif;
+
+    & a{
+        text-decoration: none;
+        color: white
+    }
 }
 /* GRID*********************** */
 #container {  display: grid;
-    grid-template-columns: 0.57fr 1fr 1fr ;
-    grid-template-rows: 1.2fr 1.4fr 0.7fr 0.7fr;
-    gap: 0px 0px;
+    grid-template-columns: 0.26fr 1fr ;
+    grid-template-rows: 1.05fr 1.4fr 0.7fr 0.7fr;
+    gap: 0px 0px;    
     grid-auto-flow: row;
   }
   
@@ -81,6 +87,7 @@ body{
         list-style: none;
         margin: 20px 0;
         font-size: 1em;
+        z-index: 50;
         & a{
             display: flex;
             align-items: center;
@@ -103,17 +110,72 @@ body{
         display: flex;
         justify-content: center;
         list-style: none;
+        margin-bottom: 10px;
         gap: 20px;
         & :hover{
             transform: scale(1.2);
         }
     }
-}
-#main{
-    margin: 1em;
-}
 
+}
 /* MAIN *****************************/
+.nav_toggle{
+    /* estara oculto cuando este en dispositivos de escritorio */
+    display: none;
+}
+main{
+   margin: 0;
+
+    & h1{
+        font-size: 2em;
+    }
+    & h2{
+        font-size: 1.5em;
+        text-align: center;
+    }
+   
+    & #intro{
+        padding: 30px;
+        height: 500px;
+        background-image: url("/images/fondo_panoramico_codigo.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+
+        & #greeting{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            opacity: 80%;
+            & .boxGreeting{
+                background-color: #3a4452;
+                padding: 10px;
+                border-radius: var(--General-BorderRadius);
+
+            }
+            & #box1 {
+                align-self: flex-start;
+              }
+        }
+        &h1{
+            font-size: 1.5em;
+        }
+    }
+    #pdf_CV{
+        display: flex;
+        padding: 30px;
+        z-index: 10;
+        background-color: #678685;
+        border-radius: var(--General-BorderRadius);
+        font-weight: 800;
+    }
+    
+}
 /* MEDIA QUERY MOVIL-------------------------- */
 @media screen and (max-width: 722px) {
 /* Grid ******************** */
@@ -124,6 +186,7 @@ body{
 /* Aside Menu *********** */
     #asideMenu{
         height: 100vh;
+        z-index: 50;
         & header{
             /* impide que se mueva la letra al desplazarse el menu */
             width: max-content;
@@ -181,9 +244,5 @@ body{
         }
 /* Main *********************** */
     main{
-        margin: 10px
-    }
-    & #bottom .icons{
-        margin-bottom: 10px;
     }
 }
