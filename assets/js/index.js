@@ -12,6 +12,3 @@ navToggle.addEventListener("click", () =>{
     }
 })
 
-// 🆕 Ajusta la velocidad del video en la cabecera
-var video = document.getElementById("videoBackground");
-video.playbackRate = 0.4; // Aquí puedes ajustar la velocidad de reproducción (0.5 es la mitad de la velocidad normal)
