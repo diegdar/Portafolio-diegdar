@@ -45,7 +45,7 @@ body{
   #contact { grid-area: 4 / 2 / 5 / 4; }
 /* ASIDE MENU **************** */
 #asideMenu{
-    background-color: #3a4245;
+    background-color: #222629;
     color: var(--AsideMenu-Font_Color);
     position:fixed ;
     height: 100vh;
