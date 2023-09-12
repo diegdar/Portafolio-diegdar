@@ -51,6 +51,7 @@ a{
     flex-direction: column;
     justify-content: space-around;
     /* padding: 5px 20px; */
+    z-index: 20;
 }
     #asideMenu h1{
         font-size: 1.5em;
@@ -142,13 +143,23 @@ main #intro{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    ;
 }
+#videoBackground {
+    position: absolute;
+    top: 0;
+    left: 17;
+    width: 100%;
+    object-fit: cover;
+    height: inherit;
+  }
 #intro #greeting{
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
     opacity: 80%;
+    z-index: 5;
 }
 #greeting .boxGreeting{
     background-color: #3a4452;
