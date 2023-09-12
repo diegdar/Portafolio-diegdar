@@ -13,16 +13,14 @@
     --AsideMenu-Font_Shadow: 2px 2px 4px black;
     --nav_menu-Items-Padding: 5px 5px;
 }   
-
 body{
     /* fuentes Google Fonts */
     font-family: 'Caveat', cursive;
     font-family: 'Ubuntu', sans-serif;
-
-    & a{
-        text-decoration: none;
-        color: white
-    }
+}
+a{
+    text-decoration: none;
+    color: white
 }
 /* GRID*********************** */
 #container {  display: grid;
@@ -53,71 +51,71 @@ body{
     flex-direction: column;
     justify-content: space-around;
     /* padding: 5px 20px; */
-    & h1{
+}
+    #asideMenu h1{
         font-size: 1.5em;
     }
-    & h2{
+    #asideMenu h2{
         font-size: 1.5em;
     }
-    & h3{
+    #asideMenu h3{
         font-size: 1.2em;
     }
-    & #top{
+#top{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 0.5em;
+    padding: 0 1em;
+}
+
+    #top figure{
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-top: 0.5em;
-        padding: 0 1em;
-        & figure{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        & img{
-            width: 170px;
-            border-radius: 10px;
-            border-color: white 2px solid;
-            box-shadow: 0px 0px 10px white;  
-            margin: 5px;      
-        }
     }
-    & .nav_menu{
-        display: flex;
-        flex-direction: column;
-        list-style: none;
-        margin: 20px 0;
-        font-size: 1em;
-        z-index: 50;
-        & a{
-            display: flex;
-            align-items: center;
-            text-decoration: none;
-            justify-content:end;
-            padding: var(--nav_menu-Items-Padding);
-            color: var(--AsideMenu-Font_Color);
-            & img{
-                margin-left: 10px;
-                padding: var(--nav_menu-Items-Padding);
-            }
-        }
-        & :hover{
-            background-color: #1c1f22;
-            padding: var(--nav_menu-Items-Padding);
-
-        }
-    }
-    & #bottom .icons{
-        display: flex;
-        justify-content: center;
-        list-style: none;
-        margin-bottom: 10px;
-        gap: 20px;
-        & :hover{
-            transform: scale(1.2);
-        }
+    #top img{
+        width: 170px;
+        border-radius: 10px;
+        border-color: white 2px solid;
+        box-shadow: 0px 0px 10px white;  
+        margin: 5px;      
     }
 
+.nav_menu{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 20px 0;
+    font-size: 1em;
+    z-index: 50;
 }
+    .nav_menu a{
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        justify-content:end;
+        padding: var(--nav_menu-Items-Padding);
+        color: var(--AsideMenu-Font_Color);
+    }
+    .nav_menu img{
+        margin-left: 10px;
+        padding: var(--nav_menu-Items-Padding);
+    }
+    .nav_menu :hover{
+        background-color: #1c1f22;
+        padding: var(--nav_menu-Items-Padding);
+    }
+#bottom .icons{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    margin-bottom: 10px;
+    gap: 20px;
+}
+    #bottom .icons :hover{
+        transform: scale(1.2);
+    }
 /* MAIN *****************************/
 .nav_toggle{
     /* estara oculto cuando este en dispositivos de escritorio */
@@ -125,92 +123,87 @@ body{
 }
 main{
    margin: 0;
-
-    & h1{
+}
+    main h1{
         font-size: 2em;
     }
-    & h2{
+    main h2{
         font-size: 1.5em;
         text-align: center;
     }
-   
-    & #intro{
-        padding: 30px;
-        height: 500px;
-        background-image: url("/images/foto_perfil_portfolio.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
-        color: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-
-        & #greeting{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            opacity: 80%;
-            & .boxGreeting{
-                background-color: #3a4452;
-                padding: 10px;
-                border-radius: var(--General-BorderRadius);
-
-            }
-            & #box1 {
-                align-self: flex-start;
-              }
-        }
-        &h1{
-            font-size: 1.5em;
-        }
-    }
-    #pdf_CV{
-        display: flex;
-        padding: 30px;
-        z-index: 10;
-        background-color: #678685;
-        border-radius: var(--General-BorderRadius);
-        font-weight: 800;
-    }
-    
+main #intro{
+    padding: 30px;
+    height: 500px;
+    background-image: url("/images/fondoCodigo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+#intro #greeting{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    opacity: 80%;
+}
+#greeting .boxGreeting{
+    background-color: #3a4452;
+    padding: 10px;
+    border-radius: var(--General-BorderRadius);
+}
+#greeting #box1 {
+    align-self: flex-start;
+  }
+#intro h1{
+    font-size: 1.5em;
+}
+#pdf_CV{
+    display: flex;
+    padding: 30px;
+    z-index: 10;
+    background-color: #678685;
+    border-radius: var(--General-BorderRadius);
+    font-weight: 800;
 }
 /* MEDIA QUERY MOVIL-------------------------- */
 @media screen and (max-width: 722px) {
 /* Grid ******************** */
     #container {  
         grid-template-columns: 0fr 2fr ;
-
       }
 /* Aside Menu *********** */
     #asideMenu{
         height: 100vh;
         z-index: 50;
-        & header{
+    }
+        #asideMenu header{
             /* impide que se mueva la letra al desplazarse el menu */
             width: max-content;
         }
-        & header{
-            & h1{
-                font-size: 1.5em;
-            }
-            & h2{
-                font-size: 1.2em;
-            }
-            & h3{
-                font-size: 1em;
-            }        
-            & img{
-                width: 20%;
-            }
+        #asideMenu h1{
+            font-size: 1.5em;
         }
-        & .nav_menu{
-            margin: 15px 0;
-            /* padding: 15px; */
+        #asideMenu h2{
+            font-size: 1.2em;
+        }
+        #asideMenu h3{
             font-size: 1em;
+        }        
+        #asideMenu img{
+            width: 20%;
         }
+    
+
+    #asideMenu .nav_menu{
+        margin: 15px 0;
+        /* padding: 15px; */
+        font-size: 1em;
     }
+
     /* muestra el icono de hamburguesa que muestra el aside Menu */
     .nav_toggle{
         display: block;
@@ -243,6 +236,4 @@ main{
             /* display: block; */
         }
 /* Main *********************** */
-    main{
-    }
 }
