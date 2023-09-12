@@ -137,7 +137,7 @@ main{
     & #intro{
         padding: 30px;
         height: 500px;
-        background-image: url("images/fondo_panoramico_codigo.jpg");
+        background-image: url("/images/foto_perfil_portfolio.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         color: white;
