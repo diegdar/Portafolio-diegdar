@@ -13,14 +13,16 @@
     --AsideMenu-Font_Shadow: 2px 2px 4px black;
     --nav_menu-Items-Padding: 5px 5px;
 }   
+
 body{
     /* fuentes Google Fonts */
     font-family: 'Caveat', cursive;
     font-family: 'Ubuntu', sans-serif;
-}
-a{
-    text-decoration: none;
-    color: white
+
+    & a{
+        text-decoration: none;
+        color: white
+    }
 }
 /* GRID*********************** */
 #container {  display: grid;
@@ -43,25 +45,33 @@ a{
   #contact { grid-area: 4 / 2 / 5 / 4; }
 /* ASIDE MENU **************** */
 #asideMenu{
-    background-color: #222629;
+    background-color: #3a4245;
     color: var(--AsideMenu-Font_Color);
     position:fixed ;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    /* padding: 5px 20px; */
-    z-index: 20;
+    z-index: 10;
+    
 }
-    #asideMenu h1{
-        font-size: 1.5em;
-    }
-    #asideMenu h2{
-        font-size: 1.5em;
-    }
-    #asideMenu h3{
-        font-size: 1.2em;
-    }
+#asideMenu #top img{
+    width: 170px;
+    border-radius: 10px;
+    border-color: white 2px solid;
+    box-shadow: 0px 0px 10px white;  
+    margin: 5px;      
+}
+#asideMenu h1{
+    font-size: 1.5em;
+}
+#asideMenu h2{
+    font-size: 1.5em;
+}
+#asideMenu h3{
+    font-size: 1.2em;
+}
+
 #top{
     display: flex;
     flex-direction: column;
@@ -69,19 +79,11 @@ a{
     margin-top: 0.5em;
     padding: 0 1em;
 }
-
-    #top figure{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    #top img{
-        width: 170px;
-        border-radius: 10px;
-        border-color: white 2px solid;
-        box-shadow: 0px 0px 10px white;  
-        margin: 5px;      
-    }
+#top figure{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 .nav_menu{
     display: flex;
@@ -91,22 +93,22 @@ a{
     font-size: 1em;
     z-index: 50;
 }
-    .nav_menu a{
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-        justify-content:end;
-        padding: var(--nav_menu-Items-Padding);
-        color: var(--AsideMenu-Font_Color);
-    }
-    .nav_menu img{
-        margin-left: 10px;
-        padding: var(--nav_menu-Items-Padding);
-    }
-    .nav_menu :hover{
-        background-color: #1c1f22;
-        padding: var(--nav_menu-Items-Padding);
-    }
+.nav_menu a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    justify-content:end;
+    padding: var(--nav_menu-Items-Padding);
+    color: var(--AsideMenu-Font_Color);
+}
+.nav_menu a img{
+    margin-left: 10px;
+    padding: var(--nav_menu-Items-Padding);
+}
+.nav_menu :hover{
+    background-color: #1c1f22;
+    padding: var(--nav_menu-Items-Padding);
+}
 #bottom .icons{
     display: flex;
     justify-content: center;
@@ -114,28 +116,28 @@ a{
     margin-bottom: 10px;
     gap: 20px;
 }
-    #bottom .icons :hover{
-        transform: scale(1.2);
-    }
+#bottom .icons :hover{
+    transform: scale(1.2);
+}
 /* MAIN *****************************/
 .nav_toggle{
     /* estara oculto cuando este en dispositivos de escritorio */
     display: none;
 }
 main{
-   margin: 0;
+   margin: 0;   
 }
-    main h1{
-        font-size: 2em;
-    }
-    main h2{
-        font-size: 1.5em;
-        text-align: center;
-    }
+main h1{
+    font-size: 2em;
+}
+main h2{
+    font-size: 1.5em;
+    text-align: center;
+}
 main #intro{
     padding: 30px;
     height: 500px;
-    background-image: url("/images/fondoCodigo.jpg");
+    background-image: url("/images/fondo_panoramico_codigo.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     color: white;
@@ -143,33 +145,34 @@ main #intro{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    ;
 }
 #videoBackground {
+    z-index: 1;
     position: absolute;
     top: 0;
     left: 17;
-    width: 100%;
+    width: 79%;
     object-fit: cover;
     height: inherit;
   }
-#intro #greeting{
+#greeting{
+    z-index: 5;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 20px;
     opacity: 80%;
-    z-index: 5;
 }
-#greeting .boxGreeting{
+.boxGreeting{
     background-color: #3a4452;
     padding: 10px;
     border-radius: var(--General-BorderRadius);
+
 }
-#greeting #box1 {
+#box1 {
     align-self: flex-start;
   }
-#intro h1{
+#greeting h1{
     font-size: 1.5em;
 }
 #pdf_CV{
@@ -179,72 +182,75 @@ main #intro{
     background-color: #678685;
     border-radius: var(--General-BorderRadius);
     font-weight: 800;
+    opacity: 90%;
 }
-/* MEDIA QUERY MOVIL-------------------------- */
 @media screen and (max-width: 722px) {
-/* Grid ******************** */
-    #container {  
-        grid-template-columns: 0fr 2fr ;
-      }
-/* Aside Menu *********** */
-    #asideMenu{
-        height: 100vh;
-        z-index: 50;
-    }
+    /* Grid ******************** */
+        #container {  
+            grid-template-columns: 0fr 2fr ;
+    
+          }
+    /* Aside Menu *********** */
+        #asideMenu{
+            height: 100vh;
+            z-index: 20;
+        }
         #asideMenu header{
             /* impide que se mueva la letra al desplazarse el menu */
             width: max-content;
         }
-        #asideMenu h1{
+        #asideMenu header h1{
             font-size: 1.5em;
         }
-        #asideMenu h2{
+        #asideMenu header h2{
             font-size: 1.2em;
         }
-        #asideMenu h3{
+        #asideMenu header h3{
             font-size: 1em;
         }        
-        #asideMenu img{
+        #asideMenu header img{
             width: 20%;
         }
-    
-
-    #asideMenu .nav_menu{
-        margin: 15px 0;
-        /* padding: 15px; */
-        font-size: 1em;
-    }
-
-    /* muestra el icono de hamburguesa que muestra el aside Menu */
-    .nav_toggle{
-        display: block;
-        color: #229bff;
-        background-color: #b9c0c4;
-        border-radius: 5px;
-        /* float: left; */
-        position: fixed;
-        top: 0.3em;
-        opacity:calc(50%);
-        right: 0.3em;
-        border: none;
-        font-size: 30px;
-        line-height: 60px;
-        cursor: pointer;
-        /* estara oculto cuando este en dispositivos de escritorio */
-        /* display: none; */
-        width: 50px;
-    }
-        .nav_menu_hide{
-        /* oculta el menu hacia la izquierda */
-        left: 100%;
-        /* display: none; */
-        /* hace que el ocultamiento sea mas suave */
-        transition: 1.5s;
-    }
-        /* muestra el menu */
-        .nav_menu_visible{
-            left: 0%;
-            /* display: block; */
+        .nav_menu{
+            margin: 15px 0;
+            /* padding: 15px; */
+            font-size: 1em;
         }
-/* Main *********************** */
+
+        /* muestra el icono de hamburguesa que muestra el aside Menu */
+        .nav_toggle{
+            z-index: 30;
+            display: block;
+            color: #229bff;
+            background-color: #b9c0c4;
+            border-radius: 5px;
+            /* float: left; */
+            position: fixed;
+            top: 0.3em;
+            opacity:calc(50%);
+            right: 0.3em;
+            border: none;
+            font-size: 30px;
+            line-height: 60px;
+            cursor: pointer;
+            /* estara oculto cuando este en dispositivos de escritorio */
+            /* display: none; */
+            width: 50px;
+        }
+            .nav_menu_hide{
+            /* oculta el menu hacia la izquierda */
+            left: 100%;
+            /* display: none; */
+            /* hace que el ocultamiento sea mas suave */
+            transition: 1.5s;
+        }
+            /* muestra el menu */
+            .nav_menu_visible{
+                left: 0%;
+                /* display: block; */
+            }
+ /*MAIN: **********************  */
+    #videoBackground {
+        width: 100%;
+    }
 }
